@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C7J-C4-cRy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Celebrity View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CelebrityViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-yY-zAP">
+                                <rect key="frame" x="-150" y="64" width="150" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cj-Xi-LUf">
+                                        <rect key="frame" x="4" y="16" width="142" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RP5-ca-k6b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                        <state key="normal" title="Guidelines">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="VkO-gP-xpq" kind="show" identifier="GuideVC" id="nCV-QE-C9R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ua5-Aa-BV8">
+                                        <rect key="frame" x="4" y="62" width="142" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="S8U-ZA-iBp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                        <state key="normal" title="Cigar Brends">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="WUq-sF-cFV" kind="show" identifier="cigarBrends" id="sdr-gk-vyL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8X-Kb-FDj">
+                                        <rect key="frame" x="4" y="108" width="142" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="uur-6H-zLD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                        <state key="normal" title="Accessories">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Jg1-dT-dqG" kind="show" identifier="AccessoriesVC" id="BAh-ww-kwx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-42-FuO">
+                                        <rect key="frame" x="4" y="154" width="142" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="xgV-m4-7rd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                        <state key="normal" title="Cigar Art">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="TrV-u4-SfI" kind="show" identifier="CigarArt" id="kn1-P8-qhm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZw-qR-u1p">
+                                        <rect key="frame" x="4" y="200" width="142" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="y7Z-MG-6aW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                        <state key="normal" title="Cigar and Spirit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="iKw-zH-dxi" kind="show" identifier="CigarAndSpirit" id="ZUI-aH-sCg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoY-7k-GJO">
+                                        <rect key="frame" x="4" y="246" width="142" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Pp7-to-POu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Point of Sales">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="HwW-Ei-jaM" kind="show" identifier="PointOfSaleCell" id="zbc-Kq-Btu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ua5-Aa-BV8" firstAttribute="top" secondItem="3Cj-Xi-LUf" secondAttribute="bottom" constant="16" id="1g7-ee-6yu"/>
+                                    <constraint firstItem="LoY-7k-GJO" firstAttribute="leading" secondItem="HPv-yY-zAP" secondAttribute="leading" constant="4" id="2QN-g1-1ai"/>
+                                    <constraint firstItem="mZw-qR-u1p" firstAttribute="leading" secondItem="HPv-yY-zAP" secondAttribute="leading" constant="4" id="BvU-uX-oKQ"/>
+                                    <constraint firstItem="3Cj-Xi-LUf" firstAttribute="leading" secondItem="HPv-yY-zAP" secondAttribute="leading" constant="4" id="CmF-JT-dOZ"/>
+                                    <constraint firstItem="3Cj-Xi-LUf" firstAttribute="top" secondItem="HPv-yY-zAP" secondAttribute="top" constant="16" id="DdP-ua-0rP"/>
+                                    <constraint firstItem="D8X-Kb-FDj" firstAttribute="top" secondItem="ua5-Aa-BV8" secondAttribute="bottom" constant="16" id="I6V-yB-1f7"/>
+                                    <constraint firstAttribute="width" constant="150" id="Mib-Le-jhW"/>
+                                    <constraint firstAttribute="trailing" secondItem="LoY-7k-GJO" secondAttribute="trailing" constant="4" id="Nr4-YY-7gX"/>
+                                    <constraint firstAttribute="trailing" secondItem="mZw-qR-u1p" secondAttribute="trailing" constant="4" id="Shn-GZ-VBS"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Cj-Xi-LUf" secondAttribute="trailing" constant="4" id="XyL-Ck-T1h"/>
+                                    <constraint firstAttribute="trailing" secondItem="ua5-Aa-BV8" secondAttribute="trailing" constant="4" id="bwt-DJ-I04"/>
+                                    <constraint firstItem="ua5-Aa-BV8" firstAttribute="leading" secondItem="HPv-yY-zAP" secondAttribute="leading" constant="4" id="dlK-1U-NFU"/>
+                                    <constraint firstAttribute="trailing" secondItem="D8X-Kb-FDj" secondAttribute="trailing" constant="4" id="f0G-sx-0HS"/>
+                                    <constraint firstItem="VNg-42-FuO" firstAttribute="leading" secondItem="HPv-yY-zAP" secondAttribute="leading" constant="4" id="jaQ-Sc-0j6"/>
+                                    <constraint firstItem="D8X-Kb-FDj" firstAttribute="leading" secondItem="HPv-yY-zAP" secondAttribute="leading" constant="4" id="kJV-t5-m4Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="VNg-42-FuO" secondAttribute="trailing" constant="4" id="kS8-yt-XWe"/>
+                                    <constraint firstItem="mZw-qR-u1p" firstAttribute="top" secondItem="VNg-42-FuO" secondAttribute="bottom" constant="16" id="kg4-LX-f91"/>
+                                    <constraint firstItem="LoY-7k-GJO" firstAttribute="top" secondItem="mZw-qR-u1p" secondAttribute="bottom" constant="16" id="rkV-Xs-Jg5"/>
+                                    <constraint firstItem="VNg-42-FuO" firstAttribute="top" secondItem="D8X-Kb-FDj" secondAttribute="bottom" constant="16" id="zDu-YZ-GH9"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8R-93-jp1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CelebrityCell" rowHeight="319" id="To9-nc-PuS" customClass="CelebrityTableViewCell" customModule="HedonistCorner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="319"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="To9-nc-PuS" id="0pu-E8-8zb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="318.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6op-KF-86N">
+                                                    <rect key="frame" x="31" y="27" width="313" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="8Tl-2c-igk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNz-eI-Ifi">
+                                                    <rect key="frame" x="31" y="243" width="313" height="49"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NNz-eI-Ifi" secondAttribute="bottom" constant="16" id="Ccb-11-jFM"/>
+                                                <constraint firstItem="NNz-eI-Ifi" firstAttribute="top" secondItem="6op-KF-86N" secondAttribute="bottom" constant="16" id="INO-Au-r9g"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6op-KF-86N" secondAttribute="trailing" constant="16" id="IUN-Ep-tCs"/>
+                                                <constraint firstItem="6op-KF-86N" firstAttribute="leading" secondItem="0pu-E8-8zb" secondAttribute="leadingMargin" constant="16" id="Jgs-Q1-bNM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NNz-eI-Ifi" secondAttribute="trailing" constant="16" id="PVh-as-uTO"/>
+                                                <constraint firstItem="6op-KF-86N" firstAttribute="top" secondItem="0pu-E8-8zb" secondAttribute="topMargin" constant="16" id="Ypw-5O-ftg"/>
+                                                <constraint firstItem="NNz-eI-Ifi" firstAttribute="leading" secondItem="0pu-E8-8zb" secondAttribute="leadingMargin" constant="16" id="iVJ-gU-36p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="celebrityImage" destination="6op-KF-86N" id="EoS-4X-jtO"/>
+                                            <outlet property="celebrityText" destination="NNz-eI-Ifi" id="CgO-yC-ggQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m8R-93-jp1" secondAttribute="trailing" id="5mu-Kf-VZw"/>
+                            <constraint firstItem="m8R-93-jp1" firstAttribute="leading" secondItem="HPv-yY-zAP" secondAttribute="trailing" id="Sd3-rA-X12"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m8R-93-jp1" secondAttribute="bottom" id="VUX-9o-daF"/>
+                            <constraint firstItem="HPv-yY-zAP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WXC-lF-O3u"/>
+                            <constraint firstItem="HPv-yY-zAP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-150" id="dOP-CX-pRk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HPv-yY-zAP" secondAttribute="bottom" id="ddq-VF-ilv"/>
+                            <constraint firstItem="m8R-93-jp1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l1z-AU-DLd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tq4-Ie-LAJ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Menu Filled" id="Dvu-cM-GTY">
+                            <connections>
+                                <action selector="menuButton:" destination="BYZ-38-t0r" id="AQe-yj-A1K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sideMenuConstraints" destination="dOP-CX-pRk" id="rAw-uf-fCa"/>
+                        <outlet property="tableView" destination="m8R-93-jp1" id="i96-TR-7L1"/>
+                        <outlet property="viewMenu" destination="HPv-yY-zAP" id="kPP-XZ-2tr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912.79999999999995" y="259.52023988005999"/>
+        </scene>
+        <!--Age Number View Controller-->
+        <scene sceneID="gYL-RK-DCd">
+            <objects>
+                <viewController id="C7J-C4-cRy" customClass="AgeNumberViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EUJ-di-tgd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cigars03" translatesAutoresizingMaskIntoConstraints="NO" id="oAb-Dq-VUA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <variation key="heightClass=regular-widthClass=compact" image="cigars"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-YV-U90">
+                                <rect key="frame" x="56" y="228.5" width="263" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W1V-Im-wuL">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRQ-SB-BK7">
+                                                <rect key="frame" x="0.0" y="0.0" width="126.5" height="50"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMO-C3-uxB">
+                                                <rect key="frame" x="136.5" y="0.0" width="126.5" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                <state key="normal" title="Confirm">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="FSs-Am-Wi3" kind="show" identifier="startSeque" id="voW-Ie-9o8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ci-B8-eaR">
+                                        <rect key="frame" x="0.0" y="60" width="263" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You do not have enough age!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqf-TA-C3y">
+                                                <rect key="frame" x="0.0" y="0.0" width="263" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEDONIST CORNER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y40-s6-yi6">
+                                <rect key="frame" x="16" y="40" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="avi-6T-tyP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IvI-Ia-APo" firstAttribute="trailing" secondItem="oAb-Dq-VUA" secondAttribute="trailing" id="70j-tM-psn"/>
+                            <constraint firstItem="IvI-Ia-APo" firstAttribute="trailing" secondItem="Y40-s6-yi6" secondAttribute="trailing" constant="16" id="C9Z-cg-uYZ"/>
+                            <constraint firstItem="oAb-Dq-VUA" firstAttribute="leading" secondItem="IvI-Ia-APo" secondAttribute="leading" id="CYc-Hn-tgS"/>
+                            <constraint firstItem="Gh9-YV-U90" firstAttribute="centerY" secondItem="EUJ-di-tgd" secondAttribute="centerY" constant="-50" id="YWC-Vw-i74"/>
+                            <constraint firstItem="IvI-Ia-APo" firstAttribute="bottom" secondItem="oAb-Dq-VUA" secondAttribute="bottom" id="k6b-iP-brf"/>
+                            <constraint firstItem="Y40-s6-yi6" firstAttribute="leading" secondItem="IvI-Ia-APo" secondAttribute="leading" constant="16" id="ppw-mR-0FQ"/>
+                            <constraint firstItem="Gh9-YV-U90" firstAttribute="centerX" secondItem="EUJ-di-tgd" secondAttribute="centerX" id="qDZ-yd-Ocg"/>
+                            <constraint firstItem="oAb-Dq-VUA" firstAttribute="top" secondItem="IvI-Ia-APo" secondAttribute="top" id="x7L-1W-bSG"/>
+                            <constraint firstItem="Y40-s6-yi6" firstAttribute="top" secondItem="IvI-Ia-APo" secondAttribute="top" constant="20" id="xCQ-bU-Egy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IvI-Ia-APo"/>
+                    </view>
+                    <connections>
+                        <outlet property="ageNumberTextField" destination="oRQ-SB-BK7" id="zHf-1v-j92"/>
+                        <outlet property="confirmButton" destination="yMO-C3-uxB" id="Ven-OU-nBp"/>
+                        <outlet property="detailView" destination="2ci-B8-eaR" id="OxF-3k-CmH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9y9-Hf-9gJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1034.4000000000001" y="259.52023988005999"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aD6-sN-YBa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FSs-Am-Wi3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nQX-eV-o3V">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fyO-uH-twL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0W-6H-feU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="260"/>
+        </scene>
+        <!--Guidelines Table View Controller-->
+        <scene sceneID="JlQ-hi-iwp">
+            <objects>
+                <tableViewController id="VkO-gP-xpq" customClass="GuidelinesTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eZA-q2-epI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GuideCell" rowHeight="242" id="zIP-UZ-QTQ" customClass="GuidelinesTableViewCell" customModule="HedonistCorner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="242"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zIP-UZ-QTQ" id="OUT-u4-Z6Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="241.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj1-2o-7se">
+                                            <rect key="frame" x="32" y="27" width="311" height="188"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pj1-2o-7se" secondAttribute="bottom" constant="16" id="B45-ZX-89c"/>
+                                        <constraint firstItem="pj1-2o-7se" firstAttribute="leading" secondItem="OUT-u4-Z6Q" secondAttribute="leadingMargin" constant="16" id="FEI-H3-Nzf"/>
+                                        <constraint firstItem="pj1-2o-7se" firstAttribute="top" secondItem="OUT-u4-Z6Q" secondAttribute="topMargin" constant="16" id="LhD-8Q-Bax"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="pj1-2o-7se" secondAttribute="trailing" constant="16" id="rl2-yT-kFJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="guideLabel" destination="pj1-2o-7se" id="997-id-CVw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VkO-gP-xpq" id="rUB-No-Ak1"/>
+                            <outlet property="delegate" destination="VkO-gP-xpq" id="nT7-30-2DE"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsV-Zs-Oqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674.39999999999998" y="1147.3763118440781"/>
+        </scene>
+        <!--Selected Cigar Brend Table View Controller-->
+        <scene sceneID="ztO-8e-RRK">
+            <objects>
+                <tableViewController id="XRy-0h-yEt" customClass="SelectedCigarBrendTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fg5-jP-GWq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="l2m-5V-D5X">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectedCigarBrend" rowHeight="372" id="JFK-Hv-vNk" customClass="SelectedCigarTableViewCell" customModule="HedonistCorner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="372"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JFK-Hv-vNk" id="qZw-sA-7ra">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="371.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CKS-iO-i4j">
+                                            <rect key="frame" x="24" y="19" width="327" height="334"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-Xe-K6R">
+                                                    <rect key="frame" x="136" y="0.0" width="55" height="29"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lIB-iw-qan">
+                                                    <rect key="frame" x="43.5" y="39" width="240" height="135"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3H-dE-VfW">
+                                                    <rect key="frame" x="146" y="184" width="35" height="22"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-vm-zY4">
+                                                    <rect key="frame" x="46" y="216" width="235" height="118"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="McY-1q-IGz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="112.5" height="118"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strenght" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U06-23-3Nc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="74" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ring Gauge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isn-5q-gZ5">
+                                                                    <rect key="frame" x="0.0" y="32" width="88.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenght" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLC-Sz-eHX">
+                                                                    <rect key="frame" x="0.0" y="64" width="56.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Factory name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36x-W4-Uo4">
+                                                                    <rect key="frame" x="0.0" y="96" width="112.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-63-Tzy">
+                                                            <rect key="frame" x="122.5" y="0.0" width="112.5" height="118"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHO-MH-Rav">
+                                                                    <rect key="frame" x="34.5" y="0.0" width="43.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-6m-ngP">
+                                                                    <rect key="frame" x="34.5" y="32" width="43.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kI3-en-EgI">
+                                                                    <rect key="frame" x="34.5" y="64" width="43.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJW-Eh-Ewv">
+                                                                    <rect key="frame" x="34.5" y="96" width="43.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CKS-iO-i4j" secondAttribute="trailing" constant="8" id="7b7-8q-qdg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="CKS-iO-i4j" secondAttribute="bottom" constant="8" id="FCv-Oq-gXl"/>
+                                        <constraint firstItem="CKS-iO-i4j" firstAttribute="top" secondItem="qZw-sA-7ra" secondAttribute="topMargin" constant="8" id="OF2-Xa-jNh"/>
+                                        <constraint firstItem="CKS-iO-i4j" firstAttribute="leading" secondItem="qZw-sA-7ra" secondAttribute="leadingMargin" constant="8" id="TBZ-Sf-z9W"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cigarFactoryName" destination="LJW-Eh-Ewv" id="Za9-lH-tHZ"/>
+                                    <outlet property="cigarLenght" destination="kI3-en-EgI" id="h7w-QQ-p0w"/>
+                                    <outlet property="cigarName" destination="dPO-Xe-K6R" id="YE2-wS-2T1"/>
+                                    <outlet property="cigarPicture" destination="lIB-iw-qan" id="ivM-Mb-aGP"/>
+                                    <outlet property="cigarRingGauge" destination="l6h-6m-ngP" id="ZA9-pW-hhT"/>
+                                    <outlet property="cigarStrenght" destination="cHO-MH-Rav" id="d0k-S9-JbU"/>
+                                    <outlet property="cigarText" destination="I3H-dE-VfW" id="vWr-5w-kXF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XRy-0h-yEt" id="0VR-NL-tJk"/>
+                            <outlet property="delegate" destination="XRy-0h-yEt" id="td6-Qh-Vo5"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="l2m-5V-D5X" id="Ftv-Hg-Ljz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lwc-zQ-y2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220" y="2006"/>
+        </scene>
+        <!--Info Cigar Brend View Controller-->
+        <scene sceneID="1oC-od-jgb">
+            <objects>
+                <viewController id="wVs-yd-kZi" customClass="InfoCigarBrendViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="113-1l-UXR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCu-Sh-BQU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsu-qz-YjU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gsu-qz-YjU" secondAttribute="trailing" id="GbG-dR-0jE"/>
+                                    <constraint firstItem="gsu-qz-YjU" firstAttribute="leading" secondItem="KCu-Sh-BQU" secondAttribute="leading" id="eEn-F7-Szx"/>
+                                    <constraint firstItem="gsu-qz-YjU" firstAttribute="top" secondItem="KCu-Sh-BQU" secondAttribute="top" id="gs0-bc-saP"/>
+                                    <constraint firstAttribute="bottom" secondItem="gsu-qz-YjU" secondAttribute="bottom" id="muq-nM-kL7"/>
+                                    <constraint firstItem="gsu-qz-YjU" firstAttribute="width" secondItem="KCu-Sh-BQU" secondAttribute="width" id="vdJ-3f-Ndi"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KCu-Sh-BQU" firstAttribute="top" secondItem="zhh-wR-kul" secondAttribute="top" id="Kga-RR-Isd"/>
+                            <constraint firstItem="zhh-wR-kul" firstAttribute="trailing" secondItem="KCu-Sh-BQU" secondAttribute="trailing" id="gsl-xx-k1G"/>
+                            <constraint firstItem="zhh-wR-kul" firstAttribute="bottom" secondItem="KCu-Sh-BQU" secondAttribute="bottom" id="n07-gT-UKi"/>
+                            <constraint firstItem="KCu-Sh-BQU" firstAttribute="leading" secondItem="zhh-wR-kul" secondAttribute="leading" id="rbh-2u-dCo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zhh-wR-kul"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoCigarBrandText" destination="gsu-qz-YjU" id="UqH-Hc-NX6"/>
+                        <outlet property="scrollView" destination="KCu-Sh-BQU" id="eS2-LG-ljP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zp-fF-q1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="2006"/>
+        </scene>
+        <!--Cigar Brend Table View Controller-->
+        <scene sceneID="3Yp-v5-a8L">
+            <objects>
+                <tableViewController id="WUq-sF-cFV" customClass="CigarBrendTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Un9-bO-PRz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="cET-dP-1jH">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="CigarBrend" rowHeight="114" id="20R-Q2-sHi" customClass="CigarBrendTableViewCell" customModule="HedonistCorner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="114"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="20R-Q2-sHi" id="ruU-Vx-3Ml">
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="113.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cigarLeaves" translatesAutoresizingMaskIntoConstraints="NO" id="HzF-BV-xqg">
+                                            <rect key="frame" x="8" y="8" width="97.5" height="97.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="HzF-BV-xqg" secondAttribute="height" multiplier="1:1" id="PUw-5k-Dxj"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1qn-yW-EEj">
+                                            <rect key="frame" x="121.5" y="37" width="161.5" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="8gv-oJ-EEa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HzF-BV-xqg" firstAttribute="top" secondItem="ruU-Vx-3Ml" secondAttribute="top" constant="8" id="Qhg-2X-Ve4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1qn-yW-EEj" secondAttribute="trailing" constant="16" id="Z0i-jS-03Y"/>
+                                        <constraint firstItem="1qn-yW-EEj" firstAttribute="top" secondItem="ruU-Vx-3Ml" secondAttribute="topMargin" constant="26" id="hMV-R6-l2H"/>
+                                        <constraint firstItem="HzF-BV-xqg" firstAttribute="leading" secondItem="ruU-Vx-3Ml" secondAttribute="leading" constant="8" id="jE0-wP-Qfe"/>
+                                        <constraint firstItem="1qn-yW-EEj" firstAttribute="leading" secondItem="HzF-BV-xqg" secondAttribute="trailing" constant="16" id="lih-dH-bxU"/>
+                                        <constraint firstAttribute="bottom" secondItem="HzF-BV-xqg" secondAttribute="bottom" constant="8" id="qIm-Ze-0II"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cigarBrendImage" destination="HzF-BV-xqg" id="I0X-u6-X77"/>
+                                    <outlet property="cigarBrendName" destination="1qn-yW-EEj" id="FyR-di-T6Q"/>
+                                    <segue destination="XRy-0h-yEt" kind="show" identifier="SelectedCigarCell" id="KtL-Ad-ogo"/>
+                                    <segue destination="wVs-yd-kZi" kind="show" identifier="InfoCigarBrand" trigger="accessoryAction" id="Zfa-KA-Cfu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WUq-sF-cFV" id="2HV-tO-Bhi"/>
+                            <outlet property="delegate" destination="WUq-sF-cFV" id="IfK-aa-cUd"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="cET-dP-1jH" id="Q3O-3F-KPh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rey-qq-Z5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="1146.4767616191905"/>
+        </scene>
+        <!--Accessories Table View Controller-->
+        <scene sceneID="PKG-X4-23R">
+            <objects>
+                <tableViewController id="Jg1-dT-dqG" customClass="AccessoriesTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="k0I-x4-YJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="AccessoriesCell" textLabel="tVY-nC-smD" style="IBUITableViewCellStyleDefault" id="v1J-OJ-6XS">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v1J-OJ-6XS" id="W8g-gP-hZC">
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tVY-nC-smD">
+                                            <rect key="frame" x="16" y="0.0" width="291" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZrH-5D-9CG" kind="show" identifier="detailVC" id="Cl6-OW-bk8"/>
+                                    <segue destination="fPM-8D-F72" kind="show" identifier="infoVC" trigger="accessoryAction" id="Er0-gv-0Ve"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jg1-dT-dqG" id="sGg-KS-lm7"/>
+                            <outlet property="delegate" destination="Jg1-dT-dqG" id="OmP-EF-PGc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPh-O5-Ivb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2191" y="1146"/>
+        </scene>
+        <!--Cigar And Spirit Table View Controller-->
+        <scene sceneID="aDp-NI-Fu7">
+            <objects>
+                <tableViewController id="iKw-zH-dxi" customClass="CigarAndSpiritTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nrr-h0-7hk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CigarAndSpiritCell" id="gpd-Gt-RtJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gpd-Gt-RtJ" id="8oc-bf-6LQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iKw-zH-dxi" id="t9C-cT-T7K"/>
+                            <outlet property="delegate" destination="iKw-zH-dxi" id="h6f-j0-fhs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRi-38-wsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4020" y="1147"/>
+        </scene>
+        <!--Point Of Sale Table View Controller-->
+        <scene sceneID="0bs-5T-hSa">
+            <objects>
+                <tableViewController id="HwW-Ei-jaM" customClass="PointOfSaleTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="acP-9M-Zye">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PointOfSaleCell" id="ka0-6A-3E0">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ka0-6A-3E0" id="EzD-yA-NzW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HwW-Ei-jaM" id="Os9-qX-7bP"/>
+                            <outlet property="delegate" destination="HwW-Ei-jaM" id="IaJ-dn-bu3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1US-IA-sbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4994" y="1147"/>
+        </scene>
+        <!--Cigar Art Table View Controller-->
+        <scene sceneID="ofg-IT-whG">
+            <objects>
+                <tableViewController id="TrV-u4-SfI" customClass="CigarArtTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O4a-zc-il0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CigarArtCell" id="A9i-u6-Hjx">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A9i-u6-Hjx" id="Q89-D2-bGb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TrV-u4-SfI" id="ALw-Sy-tQt"/>
+                            <outlet property="delegate" destination="TrV-u4-SfI" id="D7D-eN-y7f"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wir-Zr-vZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3089" y="1147"/>
+        </scene>
+        <!--Detail Accessories Table View Controller-->
+        <scene sceneID="uAq-nb-X6N">
+            <objects>
+                <tableViewController id="ZrH-5D-9CG" customClass="DetailAccessoriesTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MkY-SV-ak6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailAccessoriesCell" rowHeight="283" id="oqZ-UE-wgn" customClass="DetailAccessoriesTableViewCell" customModule="HedonistCorner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="283"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oqZ-UE-wgn" id="DB3-Xb-6gw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="282.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Dbj-cF-jlR">
+                                            <rect key="frame" x="32" y="27" width="311" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="2Pv-T2-8MR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JiK-5t-Qtz">
+                                            <rect key="frame" x="66" y="73" width="243" height="215"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JiK-5t-Qtz" firstAttribute="top" secondItem="Dbj-cF-jlR" secondAttribute="bottom" constant="16" id="9AA-fO-hgO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Dbj-cF-jlR" secondAttribute="trailing" constant="16" id="aDY-Ik-6Di"/>
+                                        <constraint firstItem="JiK-5t-Qtz" firstAttribute="bottom" secondItem="DB3-Xb-6gw" secondAttribute="bottomMargin" constant="16" id="fAe-ty-czN"/>
+                                        <constraint firstItem="Dbj-cF-jlR" firstAttribute="top" secondItem="DB3-Xb-6gw" secondAttribute="topMargin" constant="16" id="ky8-Ai-yu0"/>
+                                        <constraint firstItem="JiK-5t-Qtz" firstAttribute="leading" secondItem="DB3-Xb-6gw" secondAttribute="leadingMargin" constant="50" id="v72-8o-Tka"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JiK-5t-Qtz" secondAttribute="trailing" constant="50" id="vLU-9z-sfI"/>
+                                        <constraint firstItem="Dbj-cF-jlR" firstAttribute="leading" secondItem="DB3-Xb-6gw" secondAttribute="leadingMargin" constant="16" id="y7l-wK-cXF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfAccessories" destination="JiK-5t-Qtz" id="V4s-ma-Aav"/>
+                                    <outlet property="nameOfAccessories" destination="Dbj-cF-jlR" id="ymL-v3-PRZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZrH-5D-9CG" id="1ec-FX-5x2"/>
+                            <outlet property="delegate" destination="ZrH-5D-9CG" id="wcj-Ve-6nB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTk-Jf-Zkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="2005.5472263868066"/>
+        </scene>
+        <!--Info Accessories View Controller-->
+        <scene sceneID="PIB-RL-eHQ">
+            <objects>
+                <viewController id="fPM-8D-F72" customClass="InfoAccessoriesViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qqG-fx-keY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAt-UC-KEZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3s-z8-DWK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="c3s-z8-DWK" firstAttribute="width" secondItem="eAt-UC-KEZ" secondAttribute="width" id="4Ra-80-S9z"/>
+                                    <constraint firstAttribute="bottom" secondItem="c3s-z8-DWK" secondAttribute="bottom" id="5HO-jw-gpC"/>
+                                    <constraint firstAttribute="trailing" secondItem="c3s-z8-DWK" secondAttribute="trailing" id="8HX-pF-Vd0"/>
+                                    <constraint firstItem="c3s-z8-DWK" firstAttribute="top" secondItem="eAt-UC-KEZ" secondAttribute="top" id="Vch-7t-7Ov"/>
+                                    <constraint firstItem="c3s-z8-DWK" firstAttribute="leading" secondItem="eAt-UC-KEZ" secondAttribute="leading" id="zAa-IU-gav"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="eAt-UC-KEZ" firstAttribute="leading" secondItem="7dx-6m-lhp" secondAttribute="leading" id="6tg-X2-4zn"/>
+                            <constraint firstItem="eAt-UC-KEZ" firstAttribute="bottom" secondItem="7dx-6m-lhp" secondAttribute="bottom" id="Fwy-Wo-JVP"/>
+                            <constraint firstItem="eAt-UC-KEZ" firstAttribute="trailing" secondItem="7dx-6m-lhp" secondAttribute="trailing" id="nLu-RQ-3fG"/>
+                            <constraint firstItem="eAt-UC-KEZ" firstAttribute="top" secondItem="7dx-6m-lhp" secondAttribute="top" id="ubp-Vu-e7r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7dx-6m-lhp"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoTextLabel" destination="c3s-z8-DWK" id="F1L-WX-PHJ"/>
+                        <outlet property="scrollView" destination="eAt-UC-KEZ" id="0OR-AM-laH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgb-VX-WFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920.8000000000002" y="2005.5472263868066"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Menu Filled" width="24" height="24"/>
+        <image name="cigarLeaves" width="900" height="699"/>
+        <image name="cigars" width="205" height="246"/>
+        <image name="cigars03" width="1810" height="637"/>
+    </resources>
+</document>

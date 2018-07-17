@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C1A247620F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A247520F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift */; };
+		6C1A247820F9193E00BA98E5 /* CigarArtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A247720F9193E00BA98E5 /* CigarArtTableViewController.swift */; };
+		6C1A247B20F9196D00BA98E5 /* CigarArtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A247920F9196D00BA98E5 /* CigarArtTableViewCell.swift */; };
+		6C1A247C20F9196D00BA98E5 /* CigarArtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C1A247A20F9196D00BA98E5 /* CigarArtTableViewCell.xib */; };
+		6C1B418220FAA77B002B954C /* CigarAndSpiritTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B418120FAA77B002B954C /* CigarAndSpiritTableViewController.swift */; };
+		6C1B418620FAB257002B954C /* CigarAndSpiritTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B418420FAB257002B954C /* CigarAndSpiritTableViewCell.swift */; };
+		6C1B418720FAB257002B954C /* CigarAndSpiritTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C1B418520FAB257002B954C /* CigarAndSpiritTableViewCell.xib */; };
+		6C1B690A20E6EF6900FDC897 /* CigarBrendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690920E6EF6900FDC897 /* CigarBrendTableViewController.swift */; };
+		6C1B690C20E6F07100FDC897 /* CigarBrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690B20E6F07100FDC897 /* CigarBrendTableViewCell.swift */; };
+		6C1B690E20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690D20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift */; };
+		6C1B691020E6F12200FDC897 /* InfoCigarBrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690F20E6F12200FDC897 /* InfoCigarBrendViewController.swift */; };
+		6C1B8F5620F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B8F5520F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift */; };
+		6C1BC2D920FE57FB0012762C /* AgeNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1BC2D820FE57FB0012762C /* AgeNumberViewController.swift */; };
+		6C221A4320FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C221A4220FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift */; };
+		6C221A4620FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C221A4420FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift */; };
+		6C221A4720FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C221A4520FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib */; };
+		6C23EAE420E2DCC200C42488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23EAE320E2DCC200C42488 /* AppDelegate.swift */; };
+		6C23EAE620E2DCC200C42488 /* CelebrityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23EAE520E2DCC200C42488 /* CelebrityViewController.swift */; };
+		6C23EAE920E2DCC200C42488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C23EAE720E2DCC200C42488 /* Main.storyboard */; };
+		6C23EAEB20E2DCC500C42488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C23EAEA20E2DCC500C42488 /* Assets.xcassets */; };
+		6C23EAEE20E2DCC500C42488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C23EAEC20E2DCC500C42488 /* LaunchScreen.storyboard */; };
+		6C23EAF720E2E66900C42488 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23EAF620E2E66900C42488 /* Constants.swift */; };
+		6C23F4A820F7F84800C84A2D /* InfoAccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23F4A720F7F84800C84A2D /* InfoAccessoriesViewController.swift */; };
+		6C23F4AA20F7F86800C84A2D /* DetailAccessoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23F4A920F7F86800C84A2D /* DetailAccessoriesTableViewController.swift */; };
+		6C2A19F620E563D800E996D6 /* CigarBrends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19F520E563D800E996D6 /* CigarBrends.swift */; };
+		6C2A19F920E565E200E996D6 /* CelebrityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19F820E565E200E996D6 /* CelebrityTableViewCell.swift */; };
+		6C2A19FE20E57ECE00E996D6 /* GuidelinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19FD20E57ECE00E996D6 /* GuidelinesTableViewController.swift */; };
+		6C2A1A0020E57F5100E996D6 /* GuidelinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19FF20E57F5100E996D6 /* GuidelinesTableViewCell.swift */; };
+		6C2E633F20E3F50F0079C74A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C2E633E20E3F50F0079C74A /* GoogleService-Info.plist */; };
+		6C52103220F553C900B2F771 /* AccessoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52103120F553C900B2F771 /* AccessoriesTableViewController.swift */; };
+		A1631A1D6FA94ECF669651F2 /* Pods_HedonistCorner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594B7F2F89FFE7FADE18DE81 /* Pods_HedonistCorner.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		594B7F2F89FFE7FADE18DE81 /* Pods_HedonistCorner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HedonistCorner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		604B0DD059EFE3DFBC8EFE91 /* Pods-HedonistCorner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HedonistCorner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HedonistCorner/Pods-HedonistCorner.debug.xcconfig"; sourceTree = "<group>"; };
+		6AC08BFA9CCD9F82CDB0D093 /* Pods-HedonistCorner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HedonistCorner.release.xcconfig"; path = "Pods/Target Support Files/Pods-HedonistCorner/Pods-HedonistCorner.release.xcconfig"; sourceTree = "<group>"; };
+		6C1A247520F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAccessoriesTableViewCell.swift; sourceTree = "<group>"; };
+		6C1A247720F9193E00BA98E5 /* CigarArtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarArtTableViewController.swift; sourceTree = "<group>"; };
+		6C1A247920F9196D00BA98E5 /* CigarArtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarArtTableViewCell.swift; sourceTree = "<group>"; };
+		6C1A247A20F9196D00BA98E5 /* CigarArtTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CigarArtTableViewCell.xib; sourceTree = "<group>"; };
+		6C1B418120FAA77B002B954C /* CigarAndSpiritTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarAndSpiritTableViewController.swift; sourceTree = "<group>"; };
+		6C1B418420FAB257002B954C /* CigarAndSpiritTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarAndSpiritTableViewCell.swift; sourceTree = "<group>"; };
+		6C1B418520FAB257002B954C /* CigarAndSpiritTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CigarAndSpiritTableViewCell.xib; sourceTree = "<group>"; };
+		6C1B690920E6EF6900FDC897 /* CigarBrendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarBrendTableViewController.swift; sourceTree = "<group>"; };
+		6C1B690B20E6F07100FDC897 /* CigarBrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarBrendTableViewCell.swift; sourceTree = "<group>"; };
+		6C1B690D20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCigarBrendTableViewController.swift; sourceTree = "<group>"; };
+		6C1B690F20E6F12200FDC897 /* InfoCigarBrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCigarBrendViewController.swift; sourceTree = "<group>"; };
+		6C1B8F5520F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCigarTableViewCell.swift; sourceTree = "<group>"; };
+		6C1BC2D820FE57FB0012762C /* AgeNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeNumberViewController.swift; sourceTree = "<group>"; };
+		6C221A4220FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSaleTableViewController.swift; sourceTree = "<group>"; };
+		6C221A4420FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSaleTableViewCell.swift; sourceTree = "<group>"; };
+		6C221A4520FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointOfSaleTableViewCell.xib; sourceTree = "<group>"; };
+		6C23EAE020E2DCC200C42488 /* HedonistCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HedonistCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C23EAE320E2DCC200C42488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C23EAE520E2DCC200C42488 /* CelebrityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityViewController.swift; sourceTree = "<group>"; };
+		6C23EAE820E2DCC200C42488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C23EAEA20E2DCC500C42488 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C23EAED20E2DCC500C42488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C23EAEF20E2DCC500C42488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C23EAF620E2E66900C42488 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6C23F4A720F7F84800C84A2D /* InfoAccessoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAccessoriesViewController.swift; sourceTree = "<group>"; };
+		6C23F4A920F7F86800C84A2D /* DetailAccessoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAccessoriesTableViewController.swift; sourceTree = "<group>"; };
+		6C2A19F520E563D800E996D6 /* CigarBrends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarBrends.swift; sourceTree = "<group>"; };
+		6C2A19F820E565E200E996D6 /* CelebrityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityTableViewCell.swift; sourceTree = "<group>"; };
+		6C2A19FD20E57ECE00E996D6 /* GuidelinesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesTableViewController.swift; sourceTree = "<group>"; };
+		6C2A19FF20E57F5100E996D6 /* GuidelinesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesTableViewCell.swift; sourceTree = "<group>"; };
+		6C2E633E20E3F50F0079C74A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6C2E634020E3F5720079C74A /* HedonistCorner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HedonistCorner-Bridging-Header.h"; sourceTree = "<group>"; };
+		6C52103120F553C900B2F771 /* AccessoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C23EADD20E2DCC200C42488 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1631A1D6FA94ECF669651F2 /* Pods_HedonistCorner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C23EAD720E2DCC200C42488 = {
+			isa = PBXGroup;
+			children = (
+				6C23EAE220E2DCC200C42488 /* HedonistCorner */,
+				6C23EAE120E2DCC200C42488 /* Products */,
+				A40CF17FE5311CC3342A8BC3 /* Pods */,
+				BCDCE33BFEEA8706FBB05155 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6C23EAE120E2DCC200C42488 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C23EAE020E2DCC200C42488 /* HedonistCorner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C23EAE220E2DCC200C42488 /* HedonistCorner */ = {
+			isa = PBXGroup;
+			children = (
+				6C23EAE720E2DCC200C42488 /* Main.storyboard */,
+				6C2A19FA20E565EB00E996D6 /* CustomCells */,
+				6C2A19F720E565A000E996D6 /* Controllers */,
+				6C2A19F420E563A200E996D6 /* Model */,
+				6C23EAF520E2DD0A00C42488 /* SuportingFiles */,
+				6C2E633E20E3F50F0079C74A /* GoogleService-Info.plist */,
+				6C23EAEF20E2DCC500C42488 /* Info.plist */,
+				6C2E634020E3F5720079C74A /* HedonistCorner-Bridging-Header.h */,
+			);
+			path = HedonistCorner;
+			sourceTree = "<group>";
+		};
+		6C23EAF520E2DD0A00C42488 /* SuportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6C23EAE320E2DCC200C42488 /* AppDelegate.swift */,
+				6C23EAEC20E2DCC500C42488 /* LaunchScreen.storyboard */,
+				6C23EAEA20E2DCC500C42488 /* Assets.xcassets */,
+				6C23EAF620E2E66900C42488 /* Constants.swift */,
+			);
+			path = SuportingFiles;
+			sourceTree = "<group>";
+		};
+		6C2A19F420E563A200E996D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C2A19F520E563D800E996D6 /* CigarBrends.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C2A19F720E565A000E996D6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C1BC2D820FE57FB0012762C /* AgeNumberViewController.swift */,
+				6C23EAE520E2DCC200C42488 /* CelebrityViewController.swift */,
+				6C2A19FD20E57ECE00E996D6 /* GuidelinesTableViewController.swift */,
+				6C1B690920E6EF6900FDC897 /* CigarBrendTableViewController.swift */,
+				6C1B690D20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift */,
+				6C1B690F20E6F12200FDC897 /* InfoCigarBrendViewController.swift */,
+				6C52103120F553C900B2F771 /* AccessoriesTableViewController.swift */,
+				6C23F4A720F7F84800C84A2D /* InfoAccessoriesViewController.swift */,
+				6C23F4A920F7F86800C84A2D /* DetailAccessoriesTableViewController.swift */,
+				6C1A247720F9193E00BA98E5 /* CigarArtTableViewController.swift */,
+				6C1B418120FAA77B002B954C /* CigarAndSpiritTableViewController.swift */,
+				6C221A4220FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6C2A19FA20E565EB00E996D6 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				6C2A19F820E565E200E996D6 /* CelebrityTableViewCell.swift */,
+				6C2A19FF20E57F5100E996D6 /* GuidelinesTableViewCell.swift */,
+				6C1B690B20E6F07100FDC897 /* CigarBrendTableViewCell.swift */,
+				6C1B8F5520F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift */,
+				6C1A247520F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift */,
+				6C1A247920F9196D00BA98E5 /* CigarArtTableViewCell.swift */,
+				6C1A247A20F9196D00BA98E5 /* CigarArtTableViewCell.xib */,
+				6C1B418420FAB257002B954C /* CigarAndSpiritTableViewCell.swift */,
+				6C1B418520FAB257002B954C /* CigarAndSpiritTableViewCell.xib */,
+				6C221A4420FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift */,
+				6C221A4520FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		A40CF17FE5311CC3342A8BC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				604B0DD059EFE3DFBC8EFE91 /* Pods-HedonistCorner.debug.xcconfig */,
+				6AC08BFA9CCD9F82CDB0D093 /* Pods-HedonistCorner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCDCE33BFEEA8706FBB05155 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				594B7F2F89FFE7FADE18DE81 /* Pods_HedonistCorner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C23EADF20E2DCC200C42488 /* HedonistCorner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C23EAF220E2DCC500C42488 /* Build configuration list for PBXNativeTarget "HedonistCorner" */;
+			buildPhases = (
+				8FD9A4D7EE6F2F3D77E37755 /* [CP] Check Pods Manifest.lock */,
+				6C23EADC20E2DCC200C42488 /* Sources */,
+				6C23EADD20E2DCC200C42488 /* Frameworks */,
+				6C23EADE20E2DCC200C42488 /* Resources */,
+				2BB23916C9F6FD4ADA8A1BF9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HedonistCorner;
+			productName = HedonistCorner;
+			productReference = 6C23EAE020E2DCC200C42488 /* HedonistCorner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C23EAD820E2DCC200C42488 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Aleksandar Tesanovic";
+				TargetAttributes = {
+					6C23EADF20E2DCC200C42488 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+					};
+				};
+			};
+			buildConfigurationList = 6C23EADB20E2DCC200C42488 /* Build configuration list for PBXProject "HedonistCorner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C23EAD720E2DCC200C42488;
+			productRefGroup = 6C23EAE120E2DCC200C42488 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C23EADF20E2DCC200C42488 /* HedonistCorner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C23EADE20E2DCC200C42488 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C1B418720FAB257002B954C /* CigarAndSpiritTableViewCell.xib in Resources */,
+				6C1A247C20F9196D00BA98E5 /* CigarArtTableViewCell.xib in Resources */,
+				6C23EAEE20E2DCC500C42488 /* LaunchScreen.storyboard in Resources */,
+				6C2E633F20E3F50F0079C74A /* GoogleService-Info.plist in Resources */,
+				6C221A4720FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib in Resources */,
+				6C23EAEB20E2DCC500C42488 /* Assets.xcassets in Resources */,
+				6C23EAE920E2DCC200C42488 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BB23916C9F6FD4ADA8A1BF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HedonistCorner/Pods-HedonistCorner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HedonistCorner/Pods-HedonistCorner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FD9A4D7EE6F2F3D77E37755 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HedonistCorner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C23EADC20E2DCC200C42488 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C2A19F620E563D800E996D6 /* CigarBrends.swift in Sources */,
+				6C23EAE620E2DCC200C42488 /* CelebrityViewController.swift in Sources */,
+				6C23EAE420E2DCC200C42488 /* AppDelegate.swift in Sources */,
+				6C2A19F920E565E200E996D6 /* CelebrityTableViewCell.swift in Sources */,
+				6C2A1A0020E57F5100E996D6 /* GuidelinesTableViewCell.swift in Sources */,
+				6C1B418620FAB257002B954C /* CigarAndSpiritTableViewCell.swift in Sources */,
+				6C2A19FE20E57ECE00E996D6 /* GuidelinesTableViewController.swift in Sources */,
+				6C52103220F553C900B2F771 /* AccessoriesTableViewController.swift in Sources */,
+				6C1B8F5620F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift in Sources */,
+				6C23F4A820F7F84800C84A2D /* InfoAccessoriesViewController.swift in Sources */,
+				6C1A247620F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift in Sources */,
+				6C1B690A20E6EF6900FDC897 /* CigarBrendTableViewController.swift in Sources */,
+				6C1A247820F9193E00BA98E5 /* CigarArtTableViewController.swift in Sources */,
+				6C1A247B20F9196D00BA98E5 /* CigarArtTableViewCell.swift in Sources */,
+				6C221A4620FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift in Sources */,
+				6C1BC2D920FE57FB0012762C /* AgeNumberViewController.swift in Sources */,
+				6C1B690E20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift in Sources */,
+				6C1B690C20E6F07100FDC897 /* CigarBrendTableViewCell.swift in Sources */,
+				6C221A4320FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift in Sources */,
+				6C23EAF720E2E66900C42488 /* Constants.swift in Sources */,
+				6C1B418220FAA77B002B954C /* CigarAndSpiritTableViewController.swift in Sources */,
+				6C1B691020E6F12200FDC897 /* InfoCigarBrendViewController.swift in Sources */,
+				6C23F4AA20F7F86800C84A2D /* DetailAccessoriesTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6C23EAE720E2DCC200C42488 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C23EAE820E2DCC200C42488 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C23EAEC20E2DCC500C42488 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C23EAED20E2DCC500C42488 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C23EAF020E2DCC500C42488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C23EAF120E2DCC500C42488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C23EAF320E2DCC500C42488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604B0DD059EFE3DFBC8EFE91 /* Pods-HedonistCorner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M6EZ2DUUPG;
+				INFOPLIST_FILE = HedonistCorner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.acateske.HedonistCorner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HedonistCorner/HedonistCorner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C23EAF420E2DCC500C42488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AC08BFA9CCD9F82CDB0D093 /* Pods-HedonistCorner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M6EZ2DUUPG;
+				INFOPLIST_FILE = HedonistCorner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.acateske.HedonistCorner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HedonistCorner/HedonistCorner-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C23EADB20E2DCC200C42488 /* Build configuration list for PBXProject "HedonistCorner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C23EAF020E2DCC500C42488 /* Debug */,
+				6C23EAF120E2DCC500C42488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C23EAF220E2DCC500C42488 /* Build configuration list for PBXNativeTarget "HedonistCorner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C23EAF320E2DCC500C42488 /* Debug */,
+				6C23EAF420E2DCC500C42488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C23EAD820E2DCC200C42488 /* Project object */;
+}
