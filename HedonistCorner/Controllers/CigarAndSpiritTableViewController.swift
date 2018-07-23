@@ -61,12 +61,10 @@ class CigarAndSpiritTableViewController: UITableViewController {
                 self.view.layoutIfNeeded()
             })
         }
-        
         if sender.tag == previousTag {
             lastCell = CigarAndSpiritTableViewCell()
             buttonTag = -1
         }
-        
         if sender.tag != previousTag {
             buttonTag = sender.tag
             lastCell = tableView.cellForRow(at: IndexPath(row: buttonTag, section: 0)) as! CigarAndSpiritTableViewCell

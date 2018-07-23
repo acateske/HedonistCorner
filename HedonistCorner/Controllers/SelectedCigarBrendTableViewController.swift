@@ -43,12 +43,6 @@ class SelectedCigarBrendTableViewController: UITableViewController {
         searchBar.delegate = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        tableView.reloadData()
-    }
-    
     //MARK: Methods
     
     private func configurationView() {
@@ -80,11 +74,15 @@ class SelectedCigarBrendTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedCigarBrend", for: indexPath) as! SelectedCigarTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedCigarBrend", for: indexPath) as!
+        SelectedCigarTableViewCell
         
         if searchBarIsEmpty() {
             cell.cigarName?.text = selectedCigarBrandCigars[indexPath.row].cigarName
-            cell.cigarPicture?.sd_setImage(with: URL(string: selectedCigarBrandCigars[indexPath.row].cigarPicture))
+            //cell.cigarPicture?.sd_setImage(with: URL(string: selectedCigarBrandCigars[indexPath.row].cigarPicture))
+            
+            cell.cigarPicture?.sd_setImage(with: URL(string: selectedCigarBrandCigars[indexPath.row].cigarPicture), placeholderImage: UIImage(named: "back"), options: .continueInBackground)
+            
             cell.cigarText?.text = selectedCigarBrandCigars[indexPath.row].cigarText
             cell.cigarStrenght?.text = selectedCigarBrandCigars[indexPath.row].cigarStrenght
             cell.cigarRingGauge?.text = selectedCigarBrandCigars[indexPath.row].cigarRingGauge
@@ -92,17 +90,22 @@ class SelectedCigarBrendTableViewController: UITableViewController {
             cell.cigarFactoryName?.text = selectedCigarBrandCigars[indexPath.row].cigarFactoryName
         } else {
             cell.cigarName?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarName
-            cell.cigarPicture?.sd_setImage(with: URL(string: filteredSelectedCigarBrandCigars[indexPath.row].cigarPicture))
+           // cell.cigarPicture?.sd_setImage(with: URL(string: filteredSelectedCigarBrandCigars[indexPath.row].cigarPicture))
+            
+             cell.cigarPicture?.sd_setImage(with: URL(string: filteredSelectedCigarBrandCigars[indexPath.row].cigarPicture), placeholderImage: UIImage(named: "cigarLeaves"), options: .continueInBackground)
             cell.cigarText?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarText
             cell.cigarStrenght?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarStrenght
             cell.cigarRingGauge?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarRingGauge
             cell.cigarLenght?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarLengt
             cell.cigarFactoryName?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarFactoryName
         }
-    
+        
         cell.selectionStyle = .none
         
-        return cell
+        UIView.animate(withDuration: 0.5) {
+            cell.contentView.layoutIfNeeded()
+        }
+       return cell
     }
 }
 

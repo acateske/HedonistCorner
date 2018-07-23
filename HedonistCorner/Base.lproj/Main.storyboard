@@ -394,33 +394,33 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectedCigarBrend" rowHeight="372" id="JFK-Hv-vNk" customClass="SelectedCigarTableViewCell" customModule="HedonistCorner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="372"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectedCigarBrend" rowHeight="318" id="JFK-Hv-vNk" customClass="SelectedCigarTableViewCell" customModule="HedonistCorner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="318"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JFK-Hv-vNk" id="qZw-sA-7ra">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="371.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="317.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CKS-iO-i4j">
-                                            <rect key="frame" x="24" y="19" width="327" height="334"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-Xe-K6R">
+                                            <rect key="frame" x="8" y="8" width="359" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="LtK-sw-T4e"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-Tc-ZIX">
+                                            <rect key="frame" x="24" y="119" width="327" height="180"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-Xe-K6R">
-                                                    <rect key="frame" x="136" y="0.0" width="55" height="29"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lIB-iw-qan">
-                                                    <rect key="frame" x="43.5" y="39" width="240" height="135"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3H-dE-VfW">
-                                                    <rect key="frame" x="146" y="184" width="35" height="22"/>
+                                                    <rect key="frame" x="146" y="0.0" width="35" height="52"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-vm-zY4">
-                                                    <rect key="frame" x="46" y="216" width="235" height="118"/>
+                                                    <rect key="frame" x="46" y="62" width="235" height="118"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="McY-1q-IGz">
                                                             <rect key="frame" x="0.0" y="0.0" width="112.5" height="118"/>
@@ -484,12 +484,24 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lIB-iw-qan">
+                                            <rect key="frame" x="32" y="56" width="311" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="NR3-3F-HdC"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="CKS-iO-i4j" secondAttribute="trailing" constant="8" id="7b7-8q-qdg"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="CKS-iO-i4j" secondAttribute="bottom" constant="8" id="FCv-Oq-gXl"/>
-                                        <constraint firstItem="CKS-iO-i4j" firstAttribute="top" secondItem="qZw-sA-7ra" secondAttribute="topMargin" constant="8" id="OF2-Xa-jNh"/>
-                                        <constraint firstItem="CKS-iO-i4j" firstAttribute="leading" secondItem="qZw-sA-7ra" secondAttribute="leadingMargin" constant="8" id="TBZ-Sf-z9W"/>
+                                        <constraint firstItem="dPO-Xe-K6R" firstAttribute="top" secondItem="qZw-sA-7ra" secondAttribute="top" constant="8" id="4n4-3B-WqO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lIB-iw-qan" secondAttribute="trailing" constant="16" id="5hJ-U4-uL1"/>
+                                        <constraint firstAttribute="trailing" secondItem="dPO-Xe-K6R" secondAttribute="trailing" constant="8" id="A9X-Xz-cNU"/>
+                                        <constraint firstItem="lIB-iw-qan" firstAttribute="top" secondItem="dPO-Xe-K6R" secondAttribute="bottom" constant="8" id="IzQ-LT-OS4"/>
+                                        <constraint firstItem="b7a-Tc-ZIX" firstAttribute="leading" secondItem="qZw-sA-7ra" secondAttribute="leadingMargin" constant="8" id="M6i-dN-3Xj"/>
+                                        <constraint firstItem="b7a-Tc-ZIX" firstAttribute="top" secondItem="lIB-iw-qan" secondAttribute="bottom" constant="8" id="VUy-3s-qfe"/>
+                                        <constraint firstItem="lIB-iw-qan" firstAttribute="leading" secondItem="qZw-sA-7ra" secondAttribute="leadingMargin" constant="16" id="f1m-xW-GNg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="b7a-Tc-ZIX" secondAttribute="trailing" constant="8" id="mVn-RO-ge9"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="b7a-Tc-ZIX" secondAttribute="bottom" constant="8" id="ryM-0C-Ef0"/>
+                                        <constraint firstItem="dPO-Xe-K6R" firstAttribute="leading" secondItem="qZw-sA-7ra" secondAttribute="leading" constant="8" id="utb-oq-COV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -514,7 +526,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lwc-zQ-y2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-220" y="2006"/>
+            <point key="canvasLocation" x="-220" y="2005.5472263868066"/>
         </scene>
         <!--Info Cigar Brend View Controller-->
         <scene sceneID="1oC-od-jgb">
@@ -581,7 +593,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="307" height="113.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cigarLeaves" translatesAutoresizingMaskIntoConstraints="NO" id="HzF-BV-xqg">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HzF-BV-xqg">
                                             <rect key="frame" x="8" y="8" width="97.5" height="97.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="HzF-BV-xqg" secondAttribute="height" multiplier="1:1" id="PUw-5k-Dxj"/>
@@ -854,7 +866,6 @@
     </scenes>
     <resources>
         <image name="Menu Filled" width="24" height="24"/>
-        <image name="cigarLeaves" width="900" height="699"/>
         <image name="cigars" width="205" height="246"/>
         <image name="cigars03" width="1810" height="637"/>
     </resources>

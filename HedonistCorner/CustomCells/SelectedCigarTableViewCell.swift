@@ -13,7 +13,11 @@ class SelectedCigarTableViewCell: UITableViewCell {
     //MARK: Properties
     
     @IBOutlet weak var cigarName: UILabel!
-    @IBOutlet weak var cigarPicture: UIImageView!
+    @IBOutlet weak var cigarPicture: UIImageView! {
+        didSet {
+            cigarPicture.layer.cornerRadius = Constants.cornerRadius
+        }
+    }
     @IBOutlet weak var cigarText: UILabel!
     @IBOutlet weak var cigarStrenght: UILabel!
     @IBOutlet weak var cigarRingGauge: UILabel!
@@ -28,7 +32,7 @@ class SelectedCigarTableViewCell: UITableViewCell {
         let cigarPictureHeight = cigarPicture.frame.size.height
         let cigarTextHeight = cigarText.frame.size.height
         
-        let height = 40 + cigarNameHeight + cigarPictureHeight + cigarTextHeight
+        let height = 30 + cigarTextHeight + cigarNameHeight + cigarPictureHeight
         
         let start = CGPoint(x: bounds.minX + 20, y: height)
         let end = CGPoint(x: bounds.maxX - 20, y: height)
@@ -46,7 +50,7 @@ class SelectedCigarTableViewCell: UITableViewCell {
         let cigarPictureHeight = cigarPicture.frame.size.height
         let cigarTextHeight = cigarText.frame.size.height
         
-        let height = 73 + cigarNameHeight + cigarPictureHeight + cigarTextHeight
+        let height = 62 + cigarTextHeight + cigarPictureHeight + cigarNameHeight
         
         let start = CGPoint(x: bounds.minX + 20, y: height)
         let end = CGPoint(x: bounds.maxX - 20, y: height)
@@ -64,7 +68,7 @@ class SelectedCigarTableViewCell: UITableViewCell {
         let cigarPictureHeight = cigarPicture.frame.size.height
         let cigarTextHeight = cigarText.frame.size.height
         
-        let height = 103 + cigarNameHeight + cigarPictureHeight + cigarTextHeight
+        let height = 94 + cigarTextHeight + cigarPictureHeight + cigarNameHeight
         
         let start = CGPoint(x: bounds.minX + 20, y: height)
         let end = CGPoint(x: bounds.maxX - 20, y: height)
@@ -81,7 +85,7 @@ class SelectedCigarTableViewCell: UITableViewCell {
         let cigarPictureHeight = cigarPicture.frame.size.height
         let cigarTextHeight = cigarText.frame.size.height
         
-        let height = 133 + cigarNameHeight + cigarPictureHeight + cigarTextHeight
+        let height = 126 + cigarTextHeight + cigarPictureHeight + cigarNameHeight
         
         let start = CGPoint(x: bounds.minX + 20, y: height)
         let end = CGPoint(x: bounds.maxX - 20, y: height)
@@ -99,7 +103,7 @@ class SelectedCigarTableViewCell: UITableViewCell {
         let cigarPictureHeight = cigarPicture.frame.size.height
         let cigarTextHeight = cigarText.frame.size.height
         
-        let height = 163 + cigarNameHeight + cigarPictureHeight + cigarTextHeight
+        let height = 158 + cigarTextHeight + cigarPictureHeight + cigarNameHeight
         
         let start = CGPoint(x: bounds.minX + 20, y: height)
         let end = CGPoint(x: bounds.maxX - 20, y: height)

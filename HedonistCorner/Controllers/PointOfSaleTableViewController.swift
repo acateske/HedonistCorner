@@ -74,6 +74,7 @@ class PointOfSaleTableViewController: UITableViewController {
     
     private func readingDataFromFirebase() {
         
+        pointOfSale = [PointOfSale]()
         ref?.child("pointOfSaleData").observe(.value, with: { (snapshot) in
             
             for child in snapshot.children {
@@ -107,7 +108,6 @@ class PointOfSaleTableViewController: UITableViewController {
                 self.view.layoutIfNeeded()
             })
         }
-        
         if sender.tag != previousTag {
             buttonTag = sender.tag
             lastCell = tableView.cellForRow(at: IndexPath(row: buttonTag, section: 0)) as! PointOfSaleTableViewCell
@@ -115,7 +115,6 @@ class PointOfSaleTableViewController: UITableViewController {
                 self.view.layoutIfNeeded()
             })
         }
-        
         if sender.tag == previousTag {
             lastCell = PointOfSaleTableViewCell()
             buttonTag = -1

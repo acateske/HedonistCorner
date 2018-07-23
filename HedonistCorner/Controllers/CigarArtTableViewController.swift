@@ -99,12 +99,10 @@ class CigarArtTableViewController: UITableViewController {
                 self.view.layoutIfNeeded()
             })
         }
-        
         if sender.tag == buttonTag {
             buttonTag = -1
             lastCell = CigarArtTableViewCell()
         }
-        
         if sender.tag != previousTag {
             buttonTag = sender.tag
             lastCell = tableView.cellForRow(at: IndexPath(row: buttonTag, section: 0)) as! CigarArtTableViewCell
