@@ -19,4 +19,5 @@ class CelebrityTableViewCell: UITableViewCell {
         }
     }
     @IBOutlet weak var celebrityText: UILabel!
+
 }

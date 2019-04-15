@@ -37,7 +37,7 @@ class SelectedCigarBrendTableViewController: UITableViewController {
         super.viewDidLoad()
 
         navigationItem.title = selectedCigarBrand?.cigarBrandName
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.separatorStyle = .none
         searchBar.delegate = self
@@ -92,7 +92,7 @@ class SelectedCigarBrendTableViewController: UITableViewController {
             cell.cigarName?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarName
            // cell.cigarPicture?.sd_setImage(with: URL(string: filteredSelectedCigarBrandCigars[indexPath.row].cigarPicture))
             
-             cell.cigarPicture?.sd_setImage(with: URL(string: filteredSelectedCigarBrandCigars[indexPath.row].cigarPicture), placeholderImage: UIImage(named: "cigarLeaves"), options: .continueInBackground)
+             cell.cigarPicture?.sd_setImage(with: URL(string: filteredSelectedCigarBrandCigars[indexPath.row].cigarPicture), placeholderImage: UIImage(named: "back"), options: .continueInBackground)
             cell.cigarText?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarText
             cell.cigarStrenght?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarStrenght
             cell.cigarRingGauge?.text = filteredSelectedCigarBrandCigars[indexPath.row].cigarRingGauge

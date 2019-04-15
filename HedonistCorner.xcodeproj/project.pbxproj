@@ -37,11 +37,25 @@
 		6C2A1A0020E57F5100E996D6 /* GuidelinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19FF20E57F5100E996D6 /* GuidelinesTableViewCell.swift */; };
 		6C2E633F20E3F50F0079C74A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C2E633E20E3F50F0079C74A /* GoogleService-Info.plist */; };
 		6C52103220F553C900B2F771 /* AccessoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52103120F553C900B2F771 /* AccessoriesTableViewController.swift */; };
-		A1631A1D6FA94ECF669651F2 /* Pods_HedonistCorner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594B7F2F89FFE7FADE18DE81 /* Pods_HedonistCorner.framework */; };
+		6CEA58652141DA5300D4E705 /* Pods_HedonistCorner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2FE7FC2141BAA100EE82AF /* Pods_HedonistCorner.framework */; };
+		6CEA586B2141DC0700D4E705 /* Pods_HedonistCorner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2FE7FC2141BAA100EE82AF /* Pods_HedonistCorner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6CEA58692141DADB00D4E705 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6CEA586B2141DC0700D4E705 /* Pods_HedonistCorner.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		594B7F2F89FFE7FADE18DE81 /* Pods_HedonistCorner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HedonistCorner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604B0DD059EFE3DFBC8EFE91 /* Pods-HedonistCorner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HedonistCorner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HedonistCorner/Pods-HedonistCorner.debug.xcconfig"; sourceTree = "<group>"; };
 		6AC08BFA9CCD9F82CDB0D093 /* Pods-HedonistCorner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HedonistCorner.release.xcconfig"; path = "Pods/Target Support Files/Pods-HedonistCorner/Pods-HedonistCorner.release.xcconfig"; sourceTree = "<group>"; };
 		6C1A247520F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAccessoriesTableViewCell.swift; sourceTree = "<group>"; };
@@ -76,6 +90,7 @@
 		6C2A19FF20E57F5100E996D6 /* GuidelinesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesTableViewCell.swift; sourceTree = "<group>"; };
 		6C2E633E20E3F50F0079C74A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C2E634020E3F5720079C74A /* HedonistCorner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HedonistCorner-Bridging-Header.h"; sourceTree = "<group>"; };
+		6C2FE7FC2141BAA100EE82AF /* Pods_HedonistCorner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_HedonistCorner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C52103120F553C900B2F771 /* AccessoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1631A1D6FA94ECF669651F2 /* Pods_HedonistCorner.framework in Frameworks */,
+				6CEA58652141DA5300D4E705 /* Pods_HedonistCorner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +207,7 @@
 		BCDCE33BFEEA8706FBB05155 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				594B7F2F89FFE7FADE18DE81 /* Pods_HedonistCorner.framework */,
+				6C2FE7FC2141BAA100EE82AF /* Pods_HedonistCorner.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,6 +224,7 @@
 				6C23EADD20E2DCC200C42488 /* Frameworks */,
 				6C23EADE20E2DCC200C42488 /* Resources */,
 				2BB23916C9F6FD4ADA8A1BF9 /* [CP] Embed Pods Frameworks */,
+				6CEA58692141DADB00D4E705 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,7 +247,7 @@
 				TargetAttributes = {
 					6C23EADF20E2DCC200C42488 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -419,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -473,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -499,7 +515,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HedonistCorner/HedonistCorner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -520,7 +536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.acateske.HedonistCorner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HedonistCorner/HedonistCorner-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

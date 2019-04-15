@@ -74,6 +74,9 @@ class AgeNumberViewController: UIViewController {
         alert.textFields?.first?.keyboardType = .numberPad
         present(alert, animated: true)
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 extension AgeNumberViewController: UITextFieldDelegate {
@@ -83,4 +86,6 @@ extension AgeNumberViewController: UITextFieldDelegate {
         resignFirstResponder()
         return true
     }
+    
+    
 }

@@ -18,6 +18,7 @@ class CelebrityViewController: UIViewController {
     @IBOutlet weak var sideMenuConstraints: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewMenu: UIView! {
+        
         didSet {
             viewMenu.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!)
         }
@@ -69,9 +70,13 @@ class CelebrityViewController: UIViewController {
     
     private func readingDataFromFirebase() {
         
-        ref?.child("celebritiesAndTheirFavoriteCigars").observe(.value, with: { (snapshot) in
+        ref?.child("celebritiesAndTheirFavoriteCigars")
+            .observe(.value, with: { (snapshot) in
+                
             guard let snap = snapshot.value as? [String: [String:Any]] else {return}
+            
             for celebrity in snap.values {
+                
                 let textAboutCelebrity = celebrity["text"] as? String ?? ""
                 let pictureAboutCelebrity = celebrity["picture"] as? String ?? ""
                 celebritiesAndTheirFavoriteCigars.append(CelebritiesAndTheirFavoriteCigars(textAboutCelebrity: textAboutCelebrity, pictureAboutCelebrity: pictureAboutCelebrity))
