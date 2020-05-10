@@ -12,6 +12,8 @@ class AgeNumberViewController: UIViewController {
 
     //Properties
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var ageNumberTextField: UITextField! {
         didSet {
             ageNumberTextField.delegate = self
@@ -34,6 +36,7 @@ class AgeNumberViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        updateUI()
         ageNumberTextField.keyboardType = .numberPad
     }
 
@@ -57,6 +60,18 @@ class AgeNumberViewController: UIViewController {
     }
     
     //MARK: Methods
+    
+    private func updateUI() {
+        let title = "HEDONIST CORNER"
+        titleLabel.text = ""
+        var charIndex = 0.0
+        for letter in title {
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
+    }
     
     private func handleAge() {
         

@@ -133,6 +133,7 @@ class CigarBrendTableViewController: UITableViewController {
             
             if let infoCigarBrandVC = segue.destination as? InfoCigarBrendViewController {
                 if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+                    print("evoo ga: \(indexPath)")
                     let cigarBrand: CigarBrands
                     if searchBarIsEmpty() {
                         cigarBrand = cigarBrandsData[indexPath.row]

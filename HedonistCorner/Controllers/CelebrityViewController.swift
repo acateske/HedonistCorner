@@ -18,7 +18,6 @@ class CelebrityViewController: UIViewController {
     @IBOutlet weak var sideMenuConstraints: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewMenu: UIView! {
-        
         didSet {
             viewMenu.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!)
         }
