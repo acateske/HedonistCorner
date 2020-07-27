@@ -7,37 +7,37 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class CelebrityViewController: UIViewController {
     
-    //MARK: Properties
+//MARK: Properties
     
-    var ref: DatabaseReference?
-    var menuOpen = false
+    private var celebritiesAndTheirFavoriteCigars = [CelebritiesAndTheirFavoriteCigars]()
+    private var ref: DatabaseReference?
+    private var menuOpen = false
     @IBOutlet weak var sideMenuConstraints: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewMenu: UIView! {
         didSet {
-            viewMenu.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!)
+            viewMenu.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage) ?? UIImage())
         }
     }
     
-    //MARK: View
+//MARK: View
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
         tableView.dataSource = self
         ref = Database.database().reference()
-        navigationItem.title = "Celebrities and their Favorite Cigars"
+        title = K.Names.celebritiesCigars
         tableView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSideMenu)))
         tableView.allowsSelection = false
         readingDataFromFirebase()
     }
     
-    //MARK: Methods
+//MARK: Methods
     
     @IBAction func menuButton(_ sender: UIBarButtonItem) {
         
@@ -69,34 +69,31 @@ class CelebrityViewController: UIViewController {
     
     private func readingDataFromFirebase() {
         
-        ref?.child("celebritiesAndTheirFavoriteCigars")
-            .observe(.value, with: { (snapshot) in
-                
-            guard let snap = snapshot.value as? [String: [String:Any]] else {return}
-            
-            for celebrity in snap.values {
-                
-                let textAboutCelebrity = celebrity["text"] as? String ?? ""
-                let pictureAboutCelebrity = celebrity["picture"] as? String ?? ""
-                celebritiesAndTheirFavoriteCigars.append(CelebritiesAndTheirFavoriteCigars(textAboutCelebrity: textAboutCelebrity, pictureAboutCelebrity: pictureAboutCelebrity))
-            }
-            self.tableView.reloadData()
-        })
+        ref?.child(K.FirebaseCollectionNames.celebritiesCigars)
+            .observe(.value, with: {[weak self] (snapshot) in
+                guard let self = self else {return}
+                guard let snap = snapshot.value as? [String: [String:Any]] else {return}
+                for celebrity in snap.values {
+                    let textAboutCelebrity = celebrity[K.FirebaseCollectionNames.text] as? String ?? ""
+                    let pictureAboutCelebrity = celebrity[K.PictureNames.image] as? String ?? ""
+                    self.celebritiesAndTheirFavoriteCigars.append(CelebritiesAndTheirFavoriteCigars(textAboutCelebrity: textAboutCelebrity, pictureAboutCelebrity: pictureAboutCelebrity))
+                }
+                self.tableView.reloadData()
+            })
     }
 }
 
-extension CelebrityViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    //MARK: TableView
+//MARK: - UITableViewDataSource Methods
+
+extension CelebrityViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return celebritiesAndTheirFavoriteCigars.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CelebrityCell", for: indexPath) as! CelebrityTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.celebrityCell, for: indexPath) as! CelebrityTableViewCell
         cell.celebrityText?.text = celebritiesAndTheirFavoriteCigars[indexPath.row].textAboutCelebrity
         cell.celebrityImage?.sd_setImage(with: URL(string: celebritiesAndTheirFavoriteCigars[indexPath.row].pictureAboutCelebrity))
         

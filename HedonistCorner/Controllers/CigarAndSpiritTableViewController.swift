@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class CigarAndSpiritTableViewController: UITableViewController {
 
     //MARK: Properties
     
+    var cigarAndSpirits = [CigarAndSpirit]()
     var ref: DatabaseReference?
     var lastCell = CigarAndSpiritTableViewCell()
     var buttonTag = -1
@@ -22,8 +23,8 @@ class CigarAndSpiritTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Cigar and Spirit"
-        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!)
+        title = K.Names.cigarAndSpirit
+        tableView.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage)!)
         tableView.allowsSelection = false
         tableView.separatorStyle = .none
         
@@ -34,18 +35,15 @@ class CigarAndSpiritTableViewController: UITableViewController {
     //MARK: Methods
     
     private func readingDataFromFirebase() {
-        
-        cigarAndSpirits = [CigarAndSpirit]()
-        
-        ref?.child("cigarAndSpirit").observe(.value, with: { (snapshot) in
-            
+                
+        ref?.child(K.FirebaseCollectionNames.cigarAndSpiritData).observe(.value, with: {[weak self] (snapshot) in
+            guard let self = self else {return}
             for child in snapshot.children {
                 guard let snap = child as? DataSnapshot else {return}
                 guard let childData = snap.value as? [String: Any] else {return}
-                let cigarAndSpiritName = childData["name"] as? String ?? ""
-                let cigarAndSpiritTetx = childData["text"] as? String ?? ""
-                
-                cigarAndSpirits.append(CigarAndSpirit(cigarAndSpiritName: cigarAndSpiritName, cigarAndSpiritText: cigarAndSpiritTetx))
+                let cigarAndSpiritName = childData[K.FirebaseCollectionNames.brend] as? String ?? ""
+                let cigarAndSpiritTetx = childData[K.FirebaseCollectionNames.text] as? String ?? ""
+                self.cigarAndSpirits.append(CigarAndSpirit(cigarAndSpiritName: cigarAndSpiritName, cigarAndSpiritText: cigarAndSpiritTetx))
             }
             self.tableView.reloadData()
         })
@@ -84,11 +82,10 @@ class CigarAndSpiritTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = Bundle.main.loadNibNamed("CigarAndSpiritTableViewCell", owner: self, options: nil)?.first as! CigarAndSpiritTableViewCell
+        let cell = Bundle.main.loadNibNamed(K.CellIdentifier.cigarAndSpiritCell, owner: self, options: nil)?.first as! CigarAndSpiritTableViewCell
         
-    
         cell.openView.backgroundColor = UIColor.orange
-        cell.detailView.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!).withAlphaComponent(0.5)
+        cell.detailView.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage) ?? UIImage() ).withAlphaComponent(0.5)
         cell.buttonName.setTitle(cigarAndSpirits[indexPath.row].cigarAndSpiritName, for: .normal)
         cell.buttonName.titleLabel?.adjustsFontSizeToFitWidth = true
         cell.buttonName.addTarget(self, action: #selector(handleOpenedCell), for: .touchUpInside)
@@ -103,7 +100,6 @@ class CigarAndSpiritTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         if indexPath.row == buttonTag {
             return 400
         } else {

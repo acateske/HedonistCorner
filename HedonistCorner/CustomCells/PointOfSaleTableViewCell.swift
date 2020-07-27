@@ -10,15 +10,15 @@ import UIKit
 
 class PointOfSaleTableViewCell: UITableViewCell {
 
-    //Properties
+   //MARK: - Properties
     
     var cellExist = false
     
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeImage: UIImageView! {
         didSet {
-            storeImage.layer.cornerRadius = Constants.cornerRadius
-            storeImage.layer.masksToBounds = Constants.masksToBounds
+            storeImage.layer.cornerRadius = K.cornerRadius
+            storeImage.layer.masksToBounds = K.masksToBounds
         }
     }
     @IBOutlet weak var storeAddressLabel: UILabel!

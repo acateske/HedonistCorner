@@ -11,26 +11,19 @@ import Foundation
 //Model for CelebrityViewControler
 
 struct CelebritiesAndTheirFavoriteCigars {
-    
     let textAboutCelebrity: String
     let pictureAboutCelebrity: String
 }
 
-var celebritiesAndTheirFavoriteCigars = [CelebritiesAndTheirFavoriteCigars]()
-
 //Model for GuidelinesViewControler
 
 struct Guideliness {
-    
     let guide: String
 }
-
-var guideliness = [Guideliness]()
 
 //Model for CigarBrandViewControler
 
 struct CigarBrands {
-    
     let cigarBrandName: String
     let cigarBrandPicture: String
     let cigarBrandText: String
@@ -43,13 +36,9 @@ struct CigarBrands {
     let cigarFactoryNames: [String]
 }
 
-var cigarBrandsData = [CigarBrands]()
-var filteredCigarBrandsData = [CigarBrands]()
-
 //Model for SelectedCigarBrandViewControler
 
 struct SelectedCigarBrand {
-    
     let cigarName: String
     let cigarText: String
     let cigarPicture: String
@@ -59,30 +48,21 @@ struct SelectedCigarBrand {
     let cigarFactoryName: String
 }
 
-var selectedCigarBrandCigars = [SelectedCigarBrand]()
-var filteredSelectedCigarBrandCigars = [SelectedCigarBrand]()
-
 //Model for AccessoriesTableViewControler
 
 struct AccessoriesData {
-    
     let accessoriesName: String
     let accessoriesText: String
     let accessoriesNames: [String]
     let accessoriesPictures: [String]
 }
 
-var accessoriesForCigars = [AccessoriesData]()
-
 //Model for CigarArtTableViewControler
 
 struct CigarArt {
-    
     let cigarArtName: String
     let cigarArtText: String
 }
-
-var cigarArts = [CigarArt]()
 
 //Model for CigarAndSpiritViewControler
 
@@ -92,12 +72,9 @@ struct CigarAndSpirit {
     let cigarAndSpiritText: String
 }
 
-var cigarAndSpirits = [CigarAndSpirit]()
-
 //Model for PointOfSaleTableViewControler
 
 struct PointOfSale {
-    
     let storeName: String
     let storeImage: String
     let storeAddress: String
@@ -111,4 +88,3 @@ struct PointOfSale {
     let sundayWorkTime: String
 }
 
-var pointOfSale = [PointOfSale]()

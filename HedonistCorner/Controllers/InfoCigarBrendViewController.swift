@@ -15,9 +15,9 @@ class InfoCigarBrendViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
             scrollView.delegate = self
-            scrollView.maximumZoomScale = Constants.maximumZoomScale
-            scrollView.minimumZoomScale = Constants.minimumZoomScale
-            scrollView.contentSize = infoCigarBrandText.frame.size
+            scrollView.maximumZoomScale = K.maximumZoomScale
+            scrollView.minimumZoomScale = K.minimumZoomScale
+           // scrollView.contentSize = infoCigarBrandText.frame.size
         }
     }
     @IBOutlet weak var infoCigarBrandText: UILabel!
@@ -28,11 +28,12 @@ class InfoCigarBrendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = infoCigarBrandVC?.cigarBrandName
+        title = infoCigarBrandVC?.cigarBrandName
         infoCigarBrandText?.text = infoCigarBrandVC?.cigarBrandText
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!)
+        view.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage)!)
     }
 }
+//MARK: - UIScrollViewDelegate
 
 extension InfoCigarBrendViewController: UIScrollViewDelegate {
     

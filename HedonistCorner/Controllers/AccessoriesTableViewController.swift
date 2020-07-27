@@ -7,13 +7,14 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class AccessoriesTableViewController: UITableViewController {
 
     //MARK: Properties
     
-    var  ref: DatabaseReference?
+    private var accessoriesForCigars = [AccessoriesData]()
+    private var ref: DatabaseReference?
     
     //MARK: View
     
@@ -22,7 +23,7 @@ class AccessoriesTableViewController: UITableViewController {
 
         ref = Database.database().reference()
         readingDataFromFirebase()
-        navigationItem.title = "Accessories"
+        title = K.Names.accessories
         tableView.backgroundColor = UIColor.orange
     }
     
@@ -30,25 +31,26 @@ class AccessoriesTableViewController: UITableViewController {
     
     private func readingDataFromFirebase() {
         
-        ref?.child("accessoriesData").observe(.value, with: { (snapshot) in
+        ref?.child(K.FirebaseCollectionNames.accessoriesData).observe(.value, with: {[weak self] (snapshot) in
+            guard let self = self else {return}
             for accessories in snapshot.children {
                 guard let snap = accessories as? DataSnapshot else {return}
                 guard let accessoriesData = snap.value as? [String: Any] else {return}
-                let accessoriesName = accessoriesData["name"] as? String ?? ""
-                let accessoriesText = accessoriesData["text"] as? String ?? ""
-                guard let accessories = accessoriesData["accessories"] as? [String: [String: Any]] else {return}
+                let accessoriesName = accessoriesData[K.FirebaseCollectionNames.brend] as? String ?? ""
+                let accessoriesText = accessoriesData[K.FirebaseCollectionNames.text] as? String ?? ""
+                guard let accessories = accessoriesData[K.FirebaseCollectionNames.accessories] as? [String: [String: Any]] else {return}
                 let sortedAccessories = accessories.sorted {$0.key < $1.key}
 
                 var accessoriesNames = [String]()
                 var accessoriesPictures = [String]()
                 
                 for i in sortedAccessories {
-                    let name = i.value["name"] as? String ?? ""
+                    let name = i.value[K.FirebaseCollectionNames.brend] as? String ?? ""
                     accessoriesNames.append(name)
-                    let pictureOfAccessories = i.value["picture"] as? String ?? ""
+                    let pictureOfAccessories = i.value[K.PictureNames.image] as? String ?? ""
                     accessoriesPictures.append(pictureOfAccessories)
                 }
-                accessoriesForCigars.append(AccessoriesData(accessoriesName: accessoriesName, accessoriesText: accessoriesText, accessoriesNames: accessoriesNames, accessoriesPictures: accessoriesPictures))
+                self.accessoriesForCigars.append(AccessoriesData(accessoriesName: accessoriesName, accessoriesText: accessoriesText, accessoriesNames: accessoriesNames, accessoriesPictures: accessoriesPictures))
             }
             self.tableView.reloadData()
         })
@@ -57,15 +59,14 @@ class AccessoriesTableViewController: UITableViewController {
     //MARK: TableView
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return accessoriesForCigars.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AccessoriesCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.accessoriesCell, for: indexPath)
         cell.textLabel?.text = accessoriesForCigars[indexPath.row].accessoriesName
-        cell.textLabel?.font = UIFont(name: "Marker Felt", size: 25)
+        cell.textLabel?.font = UIFont(name: K.Names.fontName, size: 25)
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor.orange
         cell.tintColor = UIColor.black
@@ -77,7 +78,7 @@ class AccessoriesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "detailVC" {
+        if segue.identifier == K.Seque.detailAccessoryVC {
             if let detailAccessoriesVC = segue.destination as? DetailAccessoriesTableViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let accessoriesData: AccessoriesData
@@ -86,7 +87,7 @@ class AccessoriesTableViewController: UITableViewController {
                 }
             }
             
-        } else if segue.identifier == "infoVC" {
+        } else if segue.identifier == K.Seque.infoAccessoryVC {
             if let infoAccessoriesVC = segue.destination as? InfoAccessoriesViewController {
                 if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
                     let accessoriesData: AccessoriesData

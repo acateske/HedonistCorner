@@ -14,10 +14,10 @@ class CelebrityTableViewCell: UITableViewCell {
     
     @IBOutlet weak var celebrityImage: UIImageView! {
         didSet {
-            celebrityImage.layer.masksToBounds = Constants.masksToBounds
-            celebrityImage.layer.cornerRadius = Constants.cornerRadius
+            celebrityImage.layer.masksToBounds = K.masksToBounds
+            celebrityImage.layer.cornerRadius = K.cornerRadius
         }
     }
     @IBOutlet weak var celebrityText: UILabel!
-
+    
 }

@@ -127,7 +127,7 @@
 		6C23EAE220E2DCC200C42488 /* HedonistCorner */ = {
 			isa = PBXGroup;
 			children = (
-				6C23EAE720E2DCC200C42488 /* Main.storyboard */,
+				6C4C734224CC4E2C009F329E /* Views */,
 				6C2A19FA20E565EB00E996D6 /* CustomCells */,
 				6C2A19F720E565A000E996D6 /* Controllers */,
 				6C2A19F420E563A200E996D6 /* Model */,
@@ -186,13 +186,21 @@
 				6C1B8F5520F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift */,
 				6C1A247520F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift */,
 				6C1A247920F9196D00BA98E5 /* CigarArtTableViewCell.swift */,
-				6C1A247A20F9196D00BA98E5 /* CigarArtTableViewCell.xib */,
 				6C1B418420FAB257002B954C /* CigarAndSpiritTableViewCell.swift */,
-				6C1B418520FAB257002B954C /* CigarAndSpiritTableViewCell.xib */,
 				6C221A4420FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift */,
-				6C221A4520FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		6C4C734224CC4E2C009F329E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C23EAE720E2DCC200C42488 /* Main.storyboard */,
+				6C1B418520FAB257002B954C /* CigarAndSpiritTableViewCell.xib */,
+				6C1A247A20F9196D00BA98E5 /* CigarArtTableViewCell.xib */,
+				6C221A4520FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A40CF17FE5311CC3342A8BC3 /* Pods */ = {

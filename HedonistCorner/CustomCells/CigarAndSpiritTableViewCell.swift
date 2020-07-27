@@ -17,22 +17,22 @@ class CigarAndSpiritTableViewCell: UITableViewCell {
     @IBOutlet weak var buttonName: UIButton!
     @IBOutlet weak var openView: UIView! {
         didSet {
-            openView.layer.cornerRadius = Constants.cornerRadius
-            openView.layer.masksToBounds = Constants.masksToBounds
+            openView.layer.cornerRadius = K.cornerRadius
+            openView.layer.masksToBounds = K.masksToBounds
         }
     }
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
             scrollView.contentSize = detailView.frame.size
-            scrollView.maximumZoomScale = Constants.maximumZoomScale
-            scrollView.minimumZoomScale = Constants.minimumZoomScale
+            scrollView.maximumZoomScale = K.maximumZoomScale
+            scrollView.minimumZoomScale = K.minimumZoomScale
             scrollView.delegate = self
         }
     }
     @IBOutlet weak var detailView: UIView! {
         didSet {
-            detailView.layer.cornerRadius = Constants.cornerRadius
-            detailView.layer.masksToBounds = Constants.masksToBounds
+            detailView.layer.cornerRadius = K.cornerRadius
+            detailView.layer.masksToBounds = K.masksToBounds
             detailView.isHidden = true
         }
     }
@@ -40,8 +40,7 @@ class CigarAndSpiritTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        self.contentView.backgroundColor = Constants.background_color
+        self.contentView.backgroundColor = K.background_color
     }
 
     //MARK: Methods
@@ -56,10 +55,11 @@ class CigarAndSpiritTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: - UIScrollViewDelegate Methods
+
 extension CigarAndSpiritTableViewCell: UIScrollViewDelegate {
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        
         return detailView
     }
 }

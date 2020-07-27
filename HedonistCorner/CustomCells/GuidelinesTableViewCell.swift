@@ -9,8 +9,6 @@
 import UIKit
 
 class GuidelinesTableViewCell: UITableViewCell {
-
-    //MARK: Properties
     
     @IBOutlet weak var guideLabel: UILabel!
 }

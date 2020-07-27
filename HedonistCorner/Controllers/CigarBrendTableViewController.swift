@@ -7,16 +7,18 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class CigarBrendTableViewController: UITableViewController {
     
     //MARK: Properties
     
-    var ref: DatabaseReference?
+    private var cigarBrandsData = [CigarBrands]()
+    private var filteredCigarBrandsData = [CigarBrands]()
+    private var ref: DatabaseReference?
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet {
-            searchBar.placeholder = "Search for Cigar Brand"
+            searchBar.placeholder = K.PlaceholderNames.cigarBrend
         }
     }
     
@@ -26,26 +28,24 @@ class CigarBrendTableViewController: UITableViewController {
         super.viewDidLoad()
 
         ref = Database.database().reference()
-        navigationItem.title = "Cigar Brands"
+        title = K.Names.cigarBrend
         searchBar.delegate = self
         readingDataFromFirebase()
     }
     
-    //MARK: Methods
+    //MARK: ReadingData Methods
     
     private func readingDataFromFirebase() {
-        
-        cigarBrandsData = [CigarBrands]()
-        
-        ref?.child("cigarBrandsData").observe(.value, with: { (snapshot) in
-            
+
+        ref?.child(K.FirebaseCollectionNames.cigarBrend).observe(.value, with: {[weak self] (snapshot) in
+            guard let self = self else {return}
             for brand in snapshot.children {
                 guard let snap = brand as? DataSnapshot else {return}
                 guard let brandData = snap.value as? [String: Any] else {return}
-                let brandName = brandData["name"] as? String ?? ""
-                let brandPicture = brandData["picture"] as? String ?? ""
-                let brandText = brandData["text"] as? String ?? ""
-                guard let cigarsData = brandData["cigars"] as? [String: [String: Any]] else {return}
+                let brandName = brandData[K.FirebaseCollectionNames.brend] as? String ?? ""
+                let brandPicture = brandData[K.PictureNames.image] as? String ?? ""
+                let brandText = brandData[K.FirebaseCollectionNames.text] as? String ?? ""
+                guard let cigarsData = brandData[K.FirebaseCollectionNames.cigars] as? [String: [String: Any]] else {return}
                 let sortedCigarsData = cigarsData.sorted {$0.key < $1.key}
                 
                 var cigarNames = [String]()
@@ -57,31 +57,30 @@ class CigarBrendTableViewController: UITableViewController {
                 var cigarFactoryNames = [String]()
                 
                 for cigar in sortedCigarsData {
-                    let cigarName = cigar.value["name"] as? String ?? ""
+                    let cigarName = cigar.value[K.FirebaseCollectionNames.brend] as? String ?? ""
                     cigarNames.append(cigarName)
-                    let cigarPicture = cigar.value["picture"] as? String ?? ""
+                    let cigarPicture = cigar.value[K.PictureNames.image] as? String ?? ""
                     cigarPictures.append(cigarPicture)
-                    let cigarText = cigar.value["text"] as? String ?? ""
+                    let cigarText = cigar.value[K.FirebaseCollectionNames.text] as? String ?? ""
                     cigarTexts.append(cigarText)
-                    let cigarStrenght = cigar.value["strenght"] as? String ?? ""
+                    let cigarStrenght = cigar.value[K.FirebaseCollectionNames.cigarStrenght] as? String ?? ""
                     cigarStrenghts.append(cigarStrenght)
-                    let cigarRingGauge = cigar.value["ringGauge"] as? String ?? ""
+                    let cigarRingGauge = cigar.value[K.FirebaseCollectionNames.cigarRingGauge] as? String ?? ""
                     cigarRingGauges.append(cigarRingGauge)
-                    let cigarLengt = cigar.value["lengt"] as? String ?? ""
+                    let cigarLengt = cigar.value[K.FirebaseCollectionNames.cigarLengt] as? String ?? ""
                     cigarLengts.append(cigarLengt)
-                    let cigarFactoryName = cigar.value["factoryName"] as? String ?? ""
+                    let cigarFactoryName = cigar.value[K.FirebaseCollectionNames.cigarFactory] as? String ?? ""
                     cigarFactoryNames.append(cigarFactoryName)
                 }
-                cigarBrandsData.append(CigarBrands(cigarBrandName: brandName, cigarBrandPicture: brandPicture, cigarBrandText: brandText, cigarNames: cigarNames, cigarTexts: cigarTexts, cigarPictures: cigarPictures, cigarStrenghts: cigarStrenghts, cigarRingGauges: cigarRingGauges, cigarLengts: cigarLengts, cigarFactoryNames: cigarFactoryNames))
+                self.cigarBrandsData.append(CigarBrands(cigarBrandName: brandName, cigarBrandPicture: brandPicture, cigarBrandText: brandText, cigarNames: cigarNames, cigarTexts: cigarTexts, cigarPictures: cigarPictures, cigarStrenghts: cigarStrenghts, cigarRingGauges: cigarRingGauges, cigarLengts: cigarLengts, cigarFactoryNames: cigarFactoryNames))
             }
             self.tableView.reloadData()
         })
     }
     
-    //MARK: TableView
+    //MARK: UITableViewDataSource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if searchBarIsEmpty() {
             return cigarBrandsData.count
         } else {
@@ -91,7 +90,7 @@ class CigarBrendTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CigarBrend", for: indexPath) as! CigarBrendTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.cigarBrendCell, for: indexPath) as! CigarBrendTableViewCell
         cell.tintColor = UIColor.black
         
         if searchBarIsEmpty() {
@@ -112,12 +111,11 @@ class CigarBrendTableViewController: UITableViewController {
         return 90
     }
     
-    //MARK: Navigation
+    //MARK: Navigation Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "SelectedCigarCell" {
-            
+        if segue.identifier == K.Seque.selectedCigarSeque {
             if let selectedCigarBrandVC = segue.destination as? SelectedCigarBrendTableViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let cigarBrand: CigarBrands
@@ -127,13 +125,12 @@ class CigarBrendTableViewController: UITableViewController {
                         cigarBrand = filteredCigarBrandsData[indexPath.row]
                     }
                     selectedCigarBrandVC.selectedCigarBrand = cigarBrand
+                    tableView.endEditing(true)
                 }
             }
-        } else if segue.identifier == "InfoCigarBrand" {
-            
+        } else if segue.identifier == K.Seque.infoCigarSeque {
             if let infoCigarBrandVC = segue.destination as? InfoCigarBrendViewController {
                 if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
-                    print("evoo ga: \(indexPath)")
                     let cigarBrand: CigarBrands
                     if searchBarIsEmpty() {
                         cigarBrand = cigarBrandsData[indexPath.row]
@@ -141,50 +138,45 @@ class CigarBrendTableViewController: UITableViewController {
                         cigarBrand = filteredCigarBrandsData[indexPath.row]
                     }
                     infoCigarBrandVC.infoCigarBrandVC = cigarBrand
+                    tableView.endEditing(true)
                 }
             }
         }
     }
 }
 
+//MARK: - UISearchBarDelegate Methods
+
 extension CigarBrendTableViewController: UISearchBarDelegate {
     
-    //MARK: Set up SearchBar
+    //MARK: Setup SearchBar
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        
         searchBar.showsCancelButton = true
         return true
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-
         searchBar.endEditing(true)
-        searchBar.resignFirstResponder()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        searchBar.resignFirstResponder()
+        searchBar.endEditing(true)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-        searchBar.endEditing(true)
         searchBar.showsCancelButton = false
-        searchBar.resignFirstResponder()
+        searchBar.endEditing(true)
     }
     
     func searchBarIsEmpty() -> Bool {
-        
         return searchBar.text?.isEmpty ?? true
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredCigarBrandsData = cigarBrandsData.filter({ (cigarBrand) -> Bool in
+        filteredCigarBrandsData = cigarBrandsData.filter { (cigarBrand) -> Bool in
             cigarBrand.cigarBrandName.contains(searchText)
-        })
+        }
         tableView.reloadData()
     }
 }

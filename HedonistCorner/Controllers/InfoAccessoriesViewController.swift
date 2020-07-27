@@ -12,13 +12,13 @@ class InfoAccessoriesViewController: UIViewController {
 
     //MARK: Properties
     
-    @IBOutlet weak var infoTextLabel: UILabel!
     var infoAboutAccessories: AccessoriesData?
+    @IBOutlet weak var infoTextLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
             scrollView.contentSize = infoTextLabel.frame.size
-            scrollView.maximumZoomScale = Constants.maximumZoomScale
-            scrollView.minimumZoomScale = Constants.minimumZoomScale
+            scrollView.maximumZoomScale = K.maximumZoomScale
+            scrollView.minimumZoomScale = K.minimumZoomScale
             scrollView.delegate = self
         }
     }
@@ -28,15 +28,16 @@ class InfoAccessoriesViewController: UIViewController {
         super.viewDidLoad()
 
         infoTextLabel?.text = infoAboutAccessories?.accessoriesText
-        navigationItem.title = infoAboutAccessories?.accessoriesName
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!)
+        title = infoAboutAccessories?.accessoriesName
+        view.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage)!)
     }
 }
+
+    //MARK: - UIScrollViewDelegate
 
 extension InfoAccessoriesViewController: UIScrollViewDelegate {
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        
         return infoTextLabel
     }
 }

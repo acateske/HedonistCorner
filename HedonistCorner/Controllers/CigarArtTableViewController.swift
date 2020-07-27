@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class CigarArtTableViewController: UITableViewController {
 
     //MARK: Properties
     
+    var cigarArts = [CigarArt]()
     var ref: DatabaseReference?
     var lastCell = CigarArtTableViewCell()
     var buttonTag = -1
@@ -23,26 +24,23 @@ class CigarArtTableViewController: UITableViewController {
         super.viewDidLoad()
 
         ref = Database.database().reference()
-        navigationItem.title = "Cigar Art"
+        title = K.Names.cigarArt
         tableView.allowsSelection = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!)
+        tableView.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage)!)
         readingDataFromFirebase()
     }
 
     private func readingDataFromFirebase() {
-        
-        cigarArts = [CigarArt]()
-        
-        ref?.child("cigarArt").observe(.value, with: { (snapshot) in
-
+                
+        ref?.child(K.FirebaseCollectionNames.cigarArtData).observe(.value, with: {[weak self] (snapshot) in
+            guard let self = self else {return}
             for i in snapshot.children {
                 guard let snap = i as? DataSnapshot else {return}
                 guard let cigarsData = snap.value as? [String: Any] else {return}
-                let cigarArtName = cigarsData["name"] as? String ?? ""
-                let cigarArtText = cigarsData["text"] as? String ?? ""
-    
-                cigarArts.append(CigarArt(cigarArtName: cigarArtName, cigarArtText: cigarArtText))
+                let cigarArtName = cigarsData[K.FirebaseCollectionNames.brend] as? String ?? ""
+                let cigarArtText = cigarsData[K.FirebaseCollectionNames.text] as? String ?? ""
+                self.cigarArts.append(CigarArt(cigarArtName: cigarArtName, cigarArtText: cigarArtText))
             }
             self.tableView.reloadData()
         })
@@ -57,13 +55,13 @@ class CigarArtTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = Bundle.main.loadNibNamed("CigarArtTableViewCell", owner: self, options: nil)?.first as! CigarArtTableViewCell
+        let cell = Bundle.main.loadNibNamed(K.CellIdentifier.cigarArtCell, owner: self, options: nil)?.first as! CigarArtTableViewCell
         
         if !cell.cellExist {
             cell.openView.backgroundColor = UIColor.orange
             cell.buttonName.setTitle(cigarArts[indexPath.row].cigarArtName, for: .normal)
             cell.buttonName.titleLabel?.adjustsFontSizeToFitWidth = true
-            cell.detailView.backgroundColor = UIColor(patternImage: UIImage(named: "cigarLeaves")!).withAlphaComponent(0.5)
+            cell.detailView.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage)!).withAlphaComponent(0.5)
             cell.buttonName.addTarget(self, action: #selector(handleOpenedCell), for: .touchUpInside)
             cell.cigarArtLabel?.text = cigarArts[indexPath.row].cigarArtText
             cell.buttonName.tag = indexPath.row

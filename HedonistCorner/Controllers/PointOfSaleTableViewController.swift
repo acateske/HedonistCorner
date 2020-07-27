@@ -7,22 +7,23 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class PointOfSaleTableViewController: UITableViewController {
 
     //MARK: Properties
     
-    var ref: DatabaseReference?
-    var lastCell = PointOfSaleTableViewCell()
-    var buttonTag = -1
+    private var pointOfSale = [PointOfSale]()
+    private var ref: DatabaseReference?
+    private var lastCell = PointOfSaleTableViewCell()
+    private var buttonTag = -1
     
     //MARK: View
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Point of Sale"
+        title = K.Names.salePoint
         tableView.allowsSelection = false
         ref = Database.database().reference()
         readingDataFromFirebase()
@@ -31,13 +32,12 @@ class PointOfSaleTableViewController: UITableViewController {
     //MARK: TableView
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return pointOfSale.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = Bundle.main.loadNibNamed("PointOfSaleTableViewCell", owner: self, options: nil)?.first as! PointOfSaleTableViewCell
+        let cell = Bundle.main.loadNibNamed(K.CellIdentifier.pointOfSaleCell, owner: self, options: nil)?.first as! PointOfSaleTableViewCell
         
         cell.storeNameLabel?.text = pointOfSale[indexPath.row].storeName
         cell.storeImage?.sd_setImage(with: URL(string: pointOfSale[indexPath.row].storeImage))
@@ -52,7 +52,7 @@ class PointOfSaleTableViewController: UITableViewController {
         cell.sundayWorkingTime?.text = pointOfSale[indexPath.row].sundayWorkTime
         cell.workingTimeButton.tag = indexPath.row
         cell.workingTimeButton.addTarget(self, action: #selector(handleOpenedCell), for: .touchUpInside)
-        cell.workingTimeButton.setTitle("More", for: .normal)
+        cell.workingTimeButton.setTitle(K.Names.buttonTittle, for: .normal)
         cell.cellExist = true
         
         UIView.animate(withDuration: 0.5) {
@@ -70,39 +70,37 @@ class PointOfSaleTableViewController: UITableViewController {
         }
     }
     
-    //MARK: Methods
+    //MARK: ReadingData Methods
     
     private func readingDataFromFirebase() {
         
-        pointOfSale = [PointOfSale]()
-        ref?.child("pointOfSaleData").observe(.value, with: { (snapshot) in
-            
+        ref?.child(K.FirebaseCollectionNames.salePointData).observe(.value, with: {[weak self] (snapshot) in
+            guard let self = self else {return}
             for child in snapshot.children {
                 guard let snap = child as? DataSnapshot else {return}
                 guard let childData = snap.value as? [String: Any] else {return}
-                let storeName = childData["name"] as? String ?? ""
-                let storeImage = childData["picture"] as? String ?? ""
-                let storeAddress = childData["address"] as? String ?? ""
-                let phone = childData["phone"] as? String ?? ""
-                let mondayWorkTime = childData["mondayWorkTime"] as? String ?? ""
-                let tuesdayWorkTime = childData["tuesdayWorkTime"] as? String ?? ""
-                let wednesdayWorkTime = childData["wednesdayWorkTime"] as? String ?? ""
-                let thursdayWorkTime = childData["thursdayWorkTime"] as? String ?? ""
-                let fridayWorkTime = childData["fridayWorkTime"] as? String ?? ""
-                let saturdayWorkTime = childData["saturdayWorkTime"] as? String ?? ""
-                let sundayWorkTime = childData["sundayWorkTime"] as? String ?? ""
-                
-                pointOfSale.append(PointOfSale(storeName: storeName, storeImage: storeImage, storeAddress: storeAddress, storePhone: phone, mondayWorkTime: mondayWorkTime, tuesdayWorkTime: tuesdayWorkTime, wednesdayWorkTime: wednesdayWorkTime, thursdayWorkTime: thursdayWorkTime, fridayWorkTime: fridayWorkTime, saturdayWorkTime: saturdayWorkTime, sundayWorkTime: sundayWorkTime))
+                let storeName = childData[K.FirebaseCollectionNames.brend] as? String ?? ""
+                let storeImage = childData[K.PictureNames.image] as? String ?? ""
+                let storeAddress = childData[K.FirebaseCollectionNames.address] as? String ?? ""
+                let phone = childData[K.FirebaseCollectionNames.phone] as? String ?? ""
+                let mondayWorkTime = childData[K.FirebaseCollectionNames.mondayWorkTime] as? String ?? ""
+                let tuesdayWorkTime = childData[K.FirebaseCollectionNames.tuesdayWorkTime] as? String ?? ""
+                let wednesdayWorkTime = childData[K.FirebaseCollectionNames.wednesdayWorkTime] as? String ?? ""
+                let thursdayWorkTime = childData[K.FirebaseCollectionNames.thursdayWorkTime] as? String ?? ""
+                let fridayWorkTime = childData[K.FirebaseCollectionNames.fridayWorkTime] as? String ?? ""
+                let saturdayWorkTime = childData[K.FirebaseCollectionNames.saturdayWorkTime] as? String ?? ""
+                let sundayWorkTime = childData[K.FirebaseCollectionNames.sundayWorkTime] as? String ?? ""
+                self.pointOfSale.append(PointOfSale(storeName: storeName, storeImage: storeImage, storeAddress: storeAddress, storePhone: phone, mondayWorkTime: mondayWorkTime, tuesdayWorkTime: tuesdayWorkTime, wednesdayWorkTime: wednesdayWorkTime, thursdayWorkTime: thursdayWorkTime, fridayWorkTime: fridayWorkTime, saturdayWorkTime: saturdayWorkTime, sundayWorkTime: sundayWorkTime))
             }
             self.tableView.reloadData()
         })
     }
+    //MARK: - OpenCloseCell Methods
     
     @objc private func handleOpenedCell(sender: UIButton) {
         
         tableView.beginUpdates()
         let previousTag = buttonTag
-        
         if lastCell.cellExist {
             lastCell.animation(duration: 0.5, c: {
                 self.view.layoutIfNeeded()
