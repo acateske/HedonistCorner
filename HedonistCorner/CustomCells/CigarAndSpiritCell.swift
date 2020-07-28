@@ -1,54 +1,51 @@
 //
-//  CigarArtTableViewCell.swift
+//  CigarAndSpiritTableViewCell.swift
 //  HedonistCorner
 //
-//  Created by Aleksandar Tesanovic on 7/13/18.
+//  Created by Aleksandar Tesanovic on 7/15/18.
 //  Copyright © 2018 Aleksandar Tesanovic. All rights reserved.
 //
 
 import UIKit
 
-class CigarArtTableViewCell: UITableViewCell {
+class CigarAndSpiritCell: UITableViewCell {
 
     //MARK: Properties
     
-     var cellExist = false
+    var cellExist = false
     
+    @IBOutlet weak var buttonName: UIButton!
     @IBOutlet weak var openView: UIView! {
         didSet {
             openView.layer.cornerRadius = K.cornerRadius
             openView.layer.masksToBounds = K.masksToBounds
         }
     }
-    @IBOutlet weak var buttonName: UIButton!
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
-            scrollView.delegate = self
+            scrollView.contentSize = detailView.frame.size
             scrollView.maximumZoomScale = K.maximumZoomScale
             scrollView.minimumZoomScale = K.minimumZoomScale
-            scrollView.contentSize = detailView.frame.size
+            scrollView.delegate = self
         }
     }
     @IBOutlet weak var detailView: UIView! {
         didSet {
-            detailView.isHidden = true
             detailView.layer.cornerRadius = K.cornerRadius
             detailView.layer.masksToBounds = K.masksToBounds
+            detailView.isHidden = true
         }
     }
-    @IBOutlet weak var cigarArtLabel: UILabel!
-    
-    //MARK: View
+    @IBOutlet weak var cigarAndSpiritLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         self.contentView.backgroundColor = K.background_color
     }
 
     //MARK: Methods
     
-     func animation(duration: Double, c: ()-> Void) {
+    func animation(duration: Double, c: ()-> Void) {
         
         UIView.animateKeyframes(withDuration: duration, delay: 0, options: .calculationModePaced, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: duration, animations: {
@@ -60,7 +57,7 @@ class CigarArtTableViewCell: UITableViewCell {
 
 //MARK: - UIScrollViewDelegate Methods
 
-extension CigarArtTableViewCell: UIScrollViewDelegate {
+extension CigarAndSpiritCell: UIScrollViewDelegate {
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return detailView

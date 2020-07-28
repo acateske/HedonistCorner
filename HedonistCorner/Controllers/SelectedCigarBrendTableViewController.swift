@@ -77,7 +77,7 @@ class SelectedCigarBrendTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.selectedCigarCell, for: indexPath) as!
-        SelectedCigarTableViewCell
+        SelectedCigarCell
         
         if searchBarIsEmpty() {
             cell.cigarName?.text = selectedCigarBrandCigars[indexPath.row].cigarName
@@ -114,7 +114,7 @@ extension SelectedCigarBrendTableViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+        searchBar.endEditing(true)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

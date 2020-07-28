@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GuidelinesTableViewCell: UITableViewCell {
+class GuidelinesCell: UITableViewCell {
     
     @IBOutlet weak var guideLabel: UILabel!
 }

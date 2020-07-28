@@ -38,21 +38,21 @@ class AccessoriesTableViewController: UITableViewController {
                 guard let accessoriesData = snap.value as? [String: Any] else {return}
                 let accessoriesName = accessoriesData[K.FirebaseCollectionNames.brend] as? String ?? ""
                 let accessoriesText = accessoriesData[K.FirebaseCollectionNames.text] as? String ?? ""
-                guard let accessories = accessoriesData[K.FirebaseCollectionNames.accessories] as? [String: [String: Any]] else {return}
-                let sortedAccessories = accessories.sorted {$0.key < $1.key}
-
-                var accessoriesNames = [String]()
-                var accessoriesPictures = [String]()
-                
-                for i in sortedAccessories {
-                    let name = i.value[K.FirebaseCollectionNames.brend] as? String ?? ""
-                    accessoriesNames.append(name)
-                    let pictureOfAccessories = i.value[K.PictureNames.image] as? String ?? ""
-                    accessoriesPictures.append(pictureOfAccessories)
+                if let accessories = accessoriesData[K.FirebaseCollectionNames.accessories] as? [String: [String: Any]] {
+                    let sortedAccessories = accessories.sorted {$0.key < $1.key}
+                    var accessoriesNames = [String]()
+                    var accessoriesPictures = [String]()
+                    for i in sortedAccessories {
+                        let name = i.value[K.FirebaseCollectionNames.brend] as? String ?? ""
+                        accessoriesNames.append(name)
+                        let pictureOfAccessories = i.value[K.PictureNames.image] as? String ?? ""
+                        accessoriesPictures.append(pictureOfAccessories)
+                    }
+                    self.accessoriesForCigars.append(AccessoriesData(accessoriesName: accessoriesName, accessoriesText: accessoriesText, accessoriesNames: accessoriesNames, accessoriesPictures: accessoriesPictures))
                 }
-                self.accessoriesForCigars.append(AccessoriesData(accessoriesName: accessoriesName, accessoriesText: accessoriesText, accessoriesNames: accessoriesNames, accessoriesPictures: accessoriesPictures))
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
+            
         })
     }
     
@@ -70,7 +70,6 @@ class AccessoriesTableViewController: UITableViewController {
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor.orange
         cell.tintColor = UIColor.black
-        
         return cell
     }
     
@@ -86,7 +85,6 @@ class AccessoriesTableViewController: UITableViewController {
                     detailAccessoriesVC.detailOfAccessories = accessoriesData
                 }
             }
-            
         } else if segue.identifier == K.Seque.infoAccessoryVC {
             if let infoAccessoriesVC = segue.destination as? InfoAccessoriesViewController {
                 if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {

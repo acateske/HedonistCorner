@@ -13,10 +13,10 @@ class CigarAndSpiritTableViewController: UITableViewController {
 
     //MARK: Properties
     
-    var cigarAndSpirits = [CigarAndSpirit]()
-    var ref: DatabaseReference?
-    var lastCell = CigarAndSpiritTableViewCell()
-    var buttonTag = -1
+    private var cigarAndSpirits = [CigarAndSpirit]()
+    private var ref: DatabaseReference?
+    private var lastCell = CigarAndSpiritCell()
+    private var buttonTag = -1
     
     //MARK: View
     
@@ -30,6 +30,7 @@ class CigarAndSpiritTableViewController: UITableViewController {
         
         ref = Database.database().reference()
         readingDataFromFirebase()
+        tableView.register(UINib(nibName: K.TableViewCellNibName.cigarAndSpirit, bundle: nil), forCellReuseIdentifier: K.CellIdentifier.cigarAndSpiritCell)
     }
     
     //MARK: Methods
@@ -60,12 +61,12 @@ class CigarAndSpiritTableViewController: UITableViewController {
             })
         }
         if sender.tag == previousTag {
-            lastCell = CigarAndSpiritTableViewCell()
+            lastCell = CigarAndSpiritCell()
             buttonTag = -1
         }
         if sender.tag != previousTag {
             buttonTag = sender.tag
-            lastCell = tableView.cellForRow(at: IndexPath(row: buttonTag, section: 0)) as! CigarAndSpiritTableViewCell
+            lastCell = tableView.cellForRow(at: IndexPath(row: buttonTag, section: 0)) as! CigarAndSpiritCell
             lastCell.animation(duration: 0.5, c: {
                 self.view.layoutIfNeeded()
             })
@@ -76,13 +77,12 @@ class CigarAndSpiritTableViewController: UITableViewController {
     //MARK: TableView
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return cigarAndSpirits.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = Bundle.main.loadNibNamed(K.CellIdentifier.cigarAndSpiritCell, owner: self, options: nil)?.first as! CigarAndSpiritTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.cigarAndSpiritCell, for: indexPath) as! CigarAndSpiritCell
         
         cell.openView.backgroundColor = UIColor.orange
         cell.detailView.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage) ?? UIImage() ).withAlphaComponent(0.5)

@@ -12,16 +12,15 @@ class InfoCigarBrendViewController: UIViewController {
     
     //MARK: Properties
     
+    var infoCigarBrandVC: CigarBrands?
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
             scrollView.delegate = self
             scrollView.maximumZoomScale = K.maximumZoomScale
             scrollView.minimumZoomScale = K.minimumZoomScale
-           // scrollView.contentSize = infoCigarBrandText.frame.size
         }
     }
     @IBOutlet weak var infoCigarBrandText: UILabel!
-    var infoCigarBrandVC: CigarBrands?
 
     //MARK: View
     
@@ -30,7 +29,7 @@ class InfoCigarBrendViewController: UIViewController {
 
         title = infoCigarBrandVC?.cigarBrandName
         infoCigarBrandText?.text = infoCigarBrandVC?.cigarBrandText
-        view.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage)!)
+        view.backgroundColor = UIColor(patternImage: UIImage(named: K.PictureNames.backgroundImage) ?? UIImage())
     }
 }
 //MARK: - UIScrollViewDelegate

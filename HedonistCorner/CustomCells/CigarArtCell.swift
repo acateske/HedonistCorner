@@ -1,42 +1,44 @@
 //
-//  CigarAndSpiritTableViewCell.swift
+//  CigarArtTableViewCell.swift
 //  HedonistCorner
 //
-//  Created by Aleksandar Tesanovic on 7/15/18.
+//  Created by Aleksandar Tesanovic on 7/13/18.
 //  Copyright © 2018 Aleksandar Tesanovic. All rights reserved.
 //
 
 import UIKit
 
-class CigarAndSpiritTableViewCell: UITableViewCell {
+class CigarArtCell: UITableViewCell {
 
     //MARK: Properties
     
     var cellExist = false
     
-    @IBOutlet weak var buttonName: UIButton!
     @IBOutlet weak var openView: UIView! {
         didSet {
             openView.layer.cornerRadius = K.cornerRadius
             openView.layer.masksToBounds = K.masksToBounds
         }
     }
+    @IBOutlet weak var buttonName: UIButton!
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
-            scrollView.contentSize = detailView.frame.size
+            scrollView.delegate = self
             scrollView.maximumZoomScale = K.maximumZoomScale
             scrollView.minimumZoomScale = K.minimumZoomScale
-            scrollView.delegate = self
+            scrollView.contentSize = detailView.frame.size
         }
     }
     @IBOutlet weak var detailView: UIView! {
         didSet {
+            detailView.isHidden = true
             detailView.layer.cornerRadius = K.cornerRadius
             detailView.layer.masksToBounds = K.masksToBounds
-            detailView.isHidden = true
         }
     }
-    @IBOutlet weak var cigarAndSpiritLabel: UILabel!
+    @IBOutlet weak var cigarArtLabel: UILabel!
+    
+    //MARK: View
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,7 +48,6 @@ class CigarAndSpiritTableViewCell: UITableViewCell {
     //MARK: Methods
     
     func animation(duration: Double, c: ()-> Void) {
-        
         UIView.animateKeyframes(withDuration: duration, delay: 0, options: .calculationModePaced, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: duration, animations: {
                 self.detailView.isHidden = !self.detailView.isHidden
@@ -57,7 +58,7 @@ class CigarAndSpiritTableViewCell: UITableViewCell {
 
 //MARK: - UIScrollViewDelegate Methods
 
-extension CigarAndSpiritTableViewCell: UIScrollViewDelegate {
+extension CigarArtCell: UIScrollViewDelegate {
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return detailView

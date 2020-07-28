@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PointOfSaleTableViewCell: UITableViewCell {
+class PointOfSaleCell: UITableViewCell {
 
    //MARK: - Properties
     

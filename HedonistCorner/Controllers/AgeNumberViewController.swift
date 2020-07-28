@@ -13,11 +13,7 @@ class AgeNumberViewController: UIViewController {
 //MARK: - Properties
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var ageNumberTextField: UITextField! {
-        didSet {
-            ageNumberTextField.delegate = self
-        }
-    }
+    @IBOutlet weak var ageNumberTextField: UITextField! 
     @IBOutlet weak var confirmButton: UIButton! {
         didSet {
             confirmButton.layer.cornerRadius = K.cornerRadius
@@ -36,6 +32,7 @@ class AgeNumberViewController: UIViewController {
         super.viewDidLoad()
 
         updateUI()
+        ageNumberTextField.delegate = self
         ageNumberTextField.keyboardType = .numberPad
     }
 
@@ -72,23 +69,27 @@ class AgeNumberViewController: UIViewController {
     
     private func handleAge() {
         
+        var textField = UITextField()
         let alert = UIAlertController(title: "Age number!", message: "How old are you?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak self] (action) in
             guard let self = self else {return}
-            if let numberData = alert.textFields?.first?.text, !numberData.isEmpty {
-                if let ageNumber = Int(numberData),  ageNumber > 17 {
-                    self.performSegue(withIdentifier: K.Seque.startSeque, sender: nil)
-                } else {
-                    self.detailView.isHidden = false
+            
+            if let textNumber = textField.text {
+                if let number = Int(textNumber) {
+                    if number > 17 {
+                        self.performSegue(withIdentifier: K.Seque.startSeque, sender: self)
+                    } else {
+                        self.detailView.isHidden = false
+                    }
                 }
             }
         }))
-        alert.addTextField(configurationHandler: nil)
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = K.PlaceholderNames.addYourAge
+            textField = alertTextField
+        }
         alert.textFields?.first?.keyboardType = .numberPad
         present(alert, animated: true)
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
 }
 
@@ -99,5 +100,9 @@ extension AgeNumberViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resignFirstResponder()
         return true
-    }    
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

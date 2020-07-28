@@ -51,7 +51,7 @@ class GuidelinesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.guideCell, for: indexPath) as! GuidelinesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.guideCell, for: indexPath) as! GuidelinesCell
         cell.guideLabel?.text = guideliness[indexPath.row].guide
         cell.selectionStyle = .none
         cell.backgroundColor = K.background_color.withAlphaComponent(0.2)

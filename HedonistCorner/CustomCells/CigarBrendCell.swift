@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CigarBrendTableViewCell: UITableViewCell {
+class CigarBrendCell: UITableViewCell {
 
     //MARK: Properties
     

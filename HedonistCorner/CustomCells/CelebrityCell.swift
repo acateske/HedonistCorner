@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CelebrityTableViewCell: UITableViewCell {
+class CelebrityCell: UITableViewCell {
 
     //MARK: Properties
     

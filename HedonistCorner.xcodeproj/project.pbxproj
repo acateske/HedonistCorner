@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C1A247620F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A247520F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift */; };
+		6C1A247620F9110400BA98E5 /* DetailAccessoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A247520F9110400BA98E5 /* DetailAccessoriesCell.swift */; };
 		6C1A247820F9193E00BA98E5 /* CigarArtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A247720F9193E00BA98E5 /* CigarArtTableViewController.swift */; };
-		6C1A247B20F9196D00BA98E5 /* CigarArtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A247920F9196D00BA98E5 /* CigarArtTableViewCell.swift */; };
+		6C1A247B20F9196D00BA98E5 /* CigarArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A247920F9196D00BA98E5 /* CigarArtCell.swift */; };
 		6C1A247C20F9196D00BA98E5 /* CigarArtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C1A247A20F9196D00BA98E5 /* CigarArtTableViewCell.xib */; };
 		6C1B418220FAA77B002B954C /* CigarAndSpiritTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B418120FAA77B002B954C /* CigarAndSpiritTableViewController.swift */; };
-		6C1B418620FAB257002B954C /* CigarAndSpiritTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B418420FAB257002B954C /* CigarAndSpiritTableViewCell.swift */; };
+		6C1B418620FAB257002B954C /* CigarAndSpiritCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B418420FAB257002B954C /* CigarAndSpiritCell.swift */; };
 		6C1B418720FAB257002B954C /* CigarAndSpiritTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C1B418520FAB257002B954C /* CigarAndSpiritTableViewCell.xib */; };
 		6C1B690A20E6EF6900FDC897 /* CigarBrendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690920E6EF6900FDC897 /* CigarBrendTableViewController.swift */; };
-		6C1B690C20E6F07100FDC897 /* CigarBrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690B20E6F07100FDC897 /* CigarBrendTableViewCell.swift */; };
+		6C1B690C20E6F07100FDC897 /* CigarBrendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690B20E6F07100FDC897 /* CigarBrendCell.swift */; };
 		6C1B690E20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690D20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift */; };
 		6C1B691020E6F12200FDC897 /* InfoCigarBrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B690F20E6F12200FDC897 /* InfoCigarBrendViewController.swift */; };
-		6C1B8F5620F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B8F5520F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift */; };
+		6C1B8F5620F2C2A500FC3F90 /* SelectedCigarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B8F5520F2C2A500FC3F90 /* SelectedCigarCell.swift */; };
 		6C1BC2D920FE57FB0012762C /* AgeNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1BC2D820FE57FB0012762C /* AgeNumberViewController.swift */; };
 		6C221A4320FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C221A4220FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift */; };
-		6C221A4620FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C221A4420FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift */; };
+		6C221A4620FB7C1400FBAC62 /* PointOfSaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C221A4420FB7C1400FBAC62 /* PointOfSaleCell.swift */; };
 		6C221A4720FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C221A4520FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib */; };
 		6C23EAE420E2DCC200C42488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23EAE320E2DCC200C42488 /* AppDelegate.swift */; };
 		6C23EAE620E2DCC200C42488 /* CelebrityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23EAE520E2DCC200C42488 /* CelebrityViewController.swift */; };
@@ -32,9 +32,9 @@
 		6C23F4A820F7F84800C84A2D /* InfoAccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23F4A720F7F84800C84A2D /* InfoAccessoriesViewController.swift */; };
 		6C23F4AA20F7F86800C84A2D /* DetailAccessoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23F4A920F7F86800C84A2D /* DetailAccessoriesTableViewController.swift */; };
 		6C2A19F620E563D800E996D6 /* CigarBrends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19F520E563D800E996D6 /* CigarBrends.swift */; };
-		6C2A19F920E565E200E996D6 /* CelebrityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19F820E565E200E996D6 /* CelebrityTableViewCell.swift */; };
+		6C2A19F920E565E200E996D6 /* CelebrityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19F820E565E200E996D6 /* CelebrityCell.swift */; };
 		6C2A19FE20E57ECE00E996D6 /* GuidelinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19FD20E57ECE00E996D6 /* GuidelinesTableViewController.swift */; };
-		6C2A1A0020E57F5100E996D6 /* GuidelinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19FF20E57F5100E996D6 /* GuidelinesTableViewCell.swift */; };
+		6C2A1A0020E57F5100E996D6 /* GuidelinesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A19FF20E57F5100E996D6 /* GuidelinesCell.swift */; };
 		6C2E633F20E3F50F0079C74A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C2E633E20E3F50F0079C74A /* GoogleService-Info.plist */; };
 		6C52103220F553C900B2F771 /* AccessoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52103120F553C900B2F771 /* AccessoriesTableViewController.swift */; };
 		6CEA58652141DA5300D4E705 /* Pods_HedonistCorner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2FE7FC2141BAA100EE82AF /* Pods_HedonistCorner.framework */; };
@@ -58,21 +58,21 @@
 /* Begin PBXFileReference section */
 		604B0DD059EFE3DFBC8EFE91 /* Pods-HedonistCorner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HedonistCorner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HedonistCorner/Pods-HedonistCorner.debug.xcconfig"; sourceTree = "<group>"; };
 		6AC08BFA9CCD9F82CDB0D093 /* Pods-HedonistCorner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HedonistCorner.release.xcconfig"; path = "Pods/Target Support Files/Pods-HedonistCorner/Pods-HedonistCorner.release.xcconfig"; sourceTree = "<group>"; };
-		6C1A247520F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAccessoriesTableViewCell.swift; sourceTree = "<group>"; };
+		6C1A247520F9110400BA98E5 /* DetailAccessoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAccessoriesCell.swift; sourceTree = "<group>"; };
 		6C1A247720F9193E00BA98E5 /* CigarArtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarArtTableViewController.swift; sourceTree = "<group>"; };
-		6C1A247920F9196D00BA98E5 /* CigarArtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarArtTableViewCell.swift; sourceTree = "<group>"; };
+		6C1A247920F9196D00BA98E5 /* CigarArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarArtCell.swift; sourceTree = "<group>"; };
 		6C1A247A20F9196D00BA98E5 /* CigarArtTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CigarArtTableViewCell.xib; sourceTree = "<group>"; };
 		6C1B418120FAA77B002B954C /* CigarAndSpiritTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarAndSpiritTableViewController.swift; sourceTree = "<group>"; };
-		6C1B418420FAB257002B954C /* CigarAndSpiritTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarAndSpiritTableViewCell.swift; sourceTree = "<group>"; };
+		6C1B418420FAB257002B954C /* CigarAndSpiritCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarAndSpiritCell.swift; sourceTree = "<group>"; };
 		6C1B418520FAB257002B954C /* CigarAndSpiritTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CigarAndSpiritTableViewCell.xib; sourceTree = "<group>"; };
 		6C1B690920E6EF6900FDC897 /* CigarBrendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarBrendTableViewController.swift; sourceTree = "<group>"; };
-		6C1B690B20E6F07100FDC897 /* CigarBrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarBrendTableViewCell.swift; sourceTree = "<group>"; };
+		6C1B690B20E6F07100FDC897 /* CigarBrendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarBrendCell.swift; sourceTree = "<group>"; };
 		6C1B690D20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCigarBrendTableViewController.swift; sourceTree = "<group>"; };
 		6C1B690F20E6F12200FDC897 /* InfoCigarBrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCigarBrendViewController.swift; sourceTree = "<group>"; };
-		6C1B8F5520F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCigarTableViewCell.swift; sourceTree = "<group>"; };
+		6C1B8F5520F2C2A500FC3F90 /* SelectedCigarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCigarCell.swift; sourceTree = "<group>"; };
 		6C1BC2D820FE57FB0012762C /* AgeNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeNumberViewController.swift; sourceTree = "<group>"; };
 		6C221A4220FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSaleTableViewController.swift; sourceTree = "<group>"; };
-		6C221A4420FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSaleTableViewCell.swift; sourceTree = "<group>"; };
+		6C221A4420FB7C1400FBAC62 /* PointOfSaleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSaleCell.swift; sourceTree = "<group>"; };
 		6C221A4520FB7C1400FBAC62 /* PointOfSaleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointOfSaleTableViewCell.xib; sourceTree = "<group>"; };
 		6C23EAE020E2DCC200C42488 /* HedonistCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HedonistCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C23EAE320E2DCC200C42488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,9 +85,9 @@
 		6C23F4A720F7F84800C84A2D /* InfoAccessoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAccessoriesViewController.swift; sourceTree = "<group>"; };
 		6C23F4A920F7F86800C84A2D /* DetailAccessoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAccessoriesTableViewController.swift; sourceTree = "<group>"; };
 		6C2A19F520E563D800E996D6 /* CigarBrends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarBrends.swift; sourceTree = "<group>"; };
-		6C2A19F820E565E200E996D6 /* CelebrityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityTableViewCell.swift; sourceTree = "<group>"; };
+		6C2A19F820E565E200E996D6 /* CelebrityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityCell.swift; sourceTree = "<group>"; };
 		6C2A19FD20E57ECE00E996D6 /* GuidelinesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesTableViewController.swift; sourceTree = "<group>"; };
-		6C2A19FF20E57F5100E996D6 /* GuidelinesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesTableViewCell.swift; sourceTree = "<group>"; };
+		6C2A19FF20E57F5100E996D6 /* GuidelinesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesCell.swift; sourceTree = "<group>"; };
 		6C2E633E20E3F50F0079C74A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C2E634020E3F5720079C74A /* HedonistCorner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HedonistCorner-Bridging-Header.h"; sourceTree = "<group>"; };
 		6C2FE7FC2141BAA100EE82AF /* Pods_HedonistCorner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_HedonistCorner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,14 +180,14 @@
 		6C2A19FA20E565EB00E996D6 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				6C2A19F820E565E200E996D6 /* CelebrityTableViewCell.swift */,
-				6C2A19FF20E57F5100E996D6 /* GuidelinesTableViewCell.swift */,
-				6C1B690B20E6F07100FDC897 /* CigarBrendTableViewCell.swift */,
-				6C1B8F5520F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift */,
-				6C1A247520F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift */,
-				6C1A247920F9196D00BA98E5 /* CigarArtTableViewCell.swift */,
-				6C1B418420FAB257002B954C /* CigarAndSpiritTableViewCell.swift */,
-				6C221A4420FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift */,
+				6C2A19F820E565E200E996D6 /* CelebrityCell.swift */,
+				6C2A19FF20E57F5100E996D6 /* GuidelinesCell.swift */,
+				6C1B690B20E6F07100FDC897 /* CigarBrendCell.swift */,
+				6C1B8F5520F2C2A500FC3F90 /* SelectedCigarCell.swift */,
+				6C1A247520F9110400BA98E5 /* DetailAccessoriesCell.swift */,
+				6C1A247920F9196D00BA98E5 /* CigarArtCell.swift */,
+				6C1B418420FAB257002B954C /* CigarAndSpiritCell.swift */,
+				6C221A4420FB7C1400FBAC62 /* PointOfSaleCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -340,21 +340,21 @@
 				6C2A19F620E563D800E996D6 /* CigarBrends.swift in Sources */,
 				6C23EAE620E2DCC200C42488 /* CelebrityViewController.swift in Sources */,
 				6C23EAE420E2DCC200C42488 /* AppDelegate.swift in Sources */,
-				6C2A19F920E565E200E996D6 /* CelebrityTableViewCell.swift in Sources */,
-				6C2A1A0020E57F5100E996D6 /* GuidelinesTableViewCell.swift in Sources */,
-				6C1B418620FAB257002B954C /* CigarAndSpiritTableViewCell.swift in Sources */,
+				6C2A19F920E565E200E996D6 /* CelebrityCell.swift in Sources */,
+				6C2A1A0020E57F5100E996D6 /* GuidelinesCell.swift in Sources */,
+				6C1B418620FAB257002B954C /* CigarAndSpiritCell.swift in Sources */,
 				6C2A19FE20E57ECE00E996D6 /* GuidelinesTableViewController.swift in Sources */,
 				6C52103220F553C900B2F771 /* AccessoriesTableViewController.swift in Sources */,
-				6C1B8F5620F2C2A500FC3F90 /* SelectedCigarTableViewCell.swift in Sources */,
+				6C1B8F5620F2C2A500FC3F90 /* SelectedCigarCell.swift in Sources */,
 				6C23F4A820F7F84800C84A2D /* InfoAccessoriesViewController.swift in Sources */,
-				6C1A247620F9110400BA98E5 /* DetailAccessoriesTableViewCell.swift in Sources */,
+				6C1A247620F9110400BA98E5 /* DetailAccessoriesCell.swift in Sources */,
 				6C1B690A20E6EF6900FDC897 /* CigarBrendTableViewController.swift in Sources */,
 				6C1A247820F9193E00BA98E5 /* CigarArtTableViewController.swift in Sources */,
-				6C1A247B20F9196D00BA98E5 /* CigarArtTableViewCell.swift in Sources */,
-				6C221A4620FB7C1400FBAC62 /* PointOfSaleTableViewCell.swift in Sources */,
+				6C1A247B20F9196D00BA98E5 /* CigarArtCell.swift in Sources */,
+				6C221A4620FB7C1400FBAC62 /* PointOfSaleCell.swift in Sources */,
 				6C1BC2D920FE57FB0012762C /* AgeNumberViewController.swift in Sources */,
 				6C1B690E20E6F10100FDC897 /* SelectedCigarBrendTableViewController.swift in Sources */,
-				6C1B690C20E6F07100FDC897 /* CigarBrendTableViewCell.swift in Sources */,
+				6C1B690C20E6F07100FDC897 /* CigarBrendCell.swift in Sources */,
 				6C221A4320FB7BCB00FBAC62 /* PointOfSaleTableViewController.swift in Sources */,
 				6C23EAF720E2E66900C42488 /* Constants.swift in Sources */,
 				6C1B418220FAA77B002B954C /* CigarAndSpiritTableViewController.swift in Sources */,

@@ -23,10 +23,10 @@ class CigarBrendTableViewController: UITableViewController {
     }
     
     //MARK: View
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         ref = Database.database().reference()
         title = K.Names.cigarBrend
         searchBar.delegate = self
@@ -36,7 +36,7 @@ class CigarBrendTableViewController: UITableViewController {
     //MARK: ReadingData Methods
     
     private func readingDataFromFirebase() {
-
+        
         ref?.child(K.FirebaseCollectionNames.cigarBrend).observe(.value, with: {[weak self] (snapshot) in
             guard let self = self else {return}
             for brand in snapshot.children {
@@ -45,36 +45,36 @@ class CigarBrendTableViewController: UITableViewController {
                 let brandName = brandData[K.FirebaseCollectionNames.brend] as? String ?? ""
                 let brandPicture = brandData[K.PictureNames.image] as? String ?? ""
                 let brandText = brandData[K.FirebaseCollectionNames.text] as? String ?? ""
-                guard let cigarsData = brandData[K.FirebaseCollectionNames.cigars] as? [String: [String: Any]] else {return}
-                let sortedCigarsData = cigarsData.sorted {$0.key < $1.key}
-                
-                var cigarNames = [String]()
-                var cigarPictures = [String]()
-                var cigarTexts = [String]()
-                var cigarStrenghts = [String]()
-                var cigarRingGauges = [String]()
-                var cigarLengts = [String]()
-                var cigarFactoryNames = [String]()
-                
-                for cigar in sortedCigarsData {
-                    let cigarName = cigar.value[K.FirebaseCollectionNames.brend] as? String ?? ""
-                    cigarNames.append(cigarName)
-                    let cigarPicture = cigar.value[K.PictureNames.image] as? String ?? ""
-                    cigarPictures.append(cigarPicture)
-                    let cigarText = cigar.value[K.FirebaseCollectionNames.text] as? String ?? ""
-                    cigarTexts.append(cigarText)
-                    let cigarStrenght = cigar.value[K.FirebaseCollectionNames.cigarStrenght] as? String ?? ""
-                    cigarStrenghts.append(cigarStrenght)
-                    let cigarRingGauge = cigar.value[K.FirebaseCollectionNames.cigarRingGauge] as? String ?? ""
-                    cigarRingGauges.append(cigarRingGauge)
-                    let cigarLengt = cigar.value[K.FirebaseCollectionNames.cigarLengt] as? String ?? ""
-                    cigarLengts.append(cigarLengt)
-                    let cigarFactoryName = cigar.value[K.FirebaseCollectionNames.cigarFactory] as? String ?? ""
-                    cigarFactoryNames.append(cigarFactoryName)
+                if let cigarsData = brandData[K.FirebaseCollectionNames.cigars] as? [String: [String: Any]] {
+                    let sortedCigarsData = cigarsData.sorted {$0.key < $1.key}
+                    var cigarNames = [String]()
+                    var cigarPictures = [String]()
+                    var cigarTexts = [String]()
+                    var cigarStrenghts = [String]()
+                    var cigarRingGauges = [String]()
+                    var cigarLengts = [String]()
+                    var cigarFactoryNames = [String]()
+                    
+                    for cigar in sortedCigarsData {
+                        let cigarName = cigar.value[K.FirebaseCollectionNames.brend] as? String ?? ""
+                        cigarNames.append(cigarName)
+                        let cigarPicture = cigar.value[K.PictureNames.image] as? String ?? ""
+                        cigarPictures.append(cigarPicture)
+                        let cigarText = cigar.value[K.FirebaseCollectionNames.text] as? String ?? ""
+                        cigarTexts.append(cigarText)
+                        let cigarStrenght = cigar.value[K.FirebaseCollectionNames.cigarStrenght] as? String ?? ""
+                        cigarStrenghts.append(cigarStrenght)
+                        let cigarRingGauge = cigar.value[K.FirebaseCollectionNames.cigarRingGauge] as? String ?? ""
+                        cigarRingGauges.append(cigarRingGauge)
+                        let cigarLengt = cigar.value[K.FirebaseCollectionNames.cigarLengt] as? String ?? ""
+                        cigarLengts.append(cigarLengt)
+                        let cigarFactoryName = cigar.value[K.FirebaseCollectionNames.cigarFactory] as? String ?? ""
+                        cigarFactoryNames.append(cigarFactoryName)
+                    }
+                    self.cigarBrandsData.append(CigarBrands(cigarBrandName: brandName, cigarBrandPicture: brandPicture, cigarBrandText: brandText, cigarNames: cigarNames, cigarTexts: cigarTexts, cigarPictures: cigarPictures, cigarStrenghts: cigarStrenghts, cigarRingGauges: cigarRingGauges, cigarLengts: cigarLengts, cigarFactoryNames: cigarFactoryNames))
                 }
-                self.cigarBrandsData.append(CigarBrands(cigarBrandName: brandName, cigarBrandPicture: brandPicture, cigarBrandText: brandText, cigarNames: cigarNames, cigarTexts: cigarTexts, cigarPictures: cigarPictures, cigarStrenghts: cigarStrenghts, cigarRingGauges: cigarRingGauges, cigarLengts: cigarLengts, cigarFactoryNames: cigarFactoryNames))
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
         })
     }
     
@@ -90,7 +90,7 @@ class CigarBrendTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.cigarBrendCell, for: indexPath) as! CigarBrendTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.cigarBrendCell, for: indexPath) as! CigarBrendCell
         cell.tintColor = UIColor.black
         
         if searchBarIsEmpty() {
@@ -100,7 +100,7 @@ class CigarBrendTableViewController: UITableViewController {
             cell.cigarBrendName?.text = filteredCigarBrandsData[indexPath.row].cigarBrandName
             cell.cigarBrendImage?.sd_setImage(with: URL(string: filteredCigarBrandsData[indexPath.row].cigarBrandPicture))
         }
-       
+        
         UIView.animate(withDuration: 0.5) {
             cell.contentView.layoutIfNeeded()
         }
@@ -177,6 +177,7 @@ extension CigarBrendTableViewController: UISearchBarDelegate {
         filteredCigarBrandsData = cigarBrandsData.filter { (cigarBrand) -> Bool in
             cigarBrand.cigarBrandName.contains(searchText)
         }
+        
         tableView.reloadData()
     }
 }

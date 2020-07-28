@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectedCigarTableViewCell: UITableViewCell {
+class SelectedCigarCell: UITableViewCell {
 
     //MARK: Properties
     

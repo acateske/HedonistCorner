@@ -35,6 +35,7 @@ class CelebrityViewController: UIViewController {
         tableView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSideMenu)))
         tableView.allowsSelection = false
         readingDataFromFirebase()
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
     }
     
 //MARK: Methods
@@ -68,7 +69,7 @@ class CelebrityViewController: UIViewController {
     }
     
     private func readingDataFromFirebase() {
-        
+    
         ref?.child(K.FirebaseCollectionNames.celebritiesCigars)
             .observe(.value, with: {[weak self] (snapshot) in
                 guard let self = self else {return}
@@ -93,7 +94,7 @@ extension CelebrityViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.celebrityCell, for: indexPath) as! CelebrityTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.celebrityCell, for: indexPath) as! CelebrityCell
         cell.celebrityText?.text = celebritiesAndTheirFavoriteCigars[indexPath.row].textAboutCelebrity
         cell.celebrityImage?.sd_setImage(with: URL(string: celebritiesAndTheirFavoriteCigars[indexPath.row].pictureAboutCelebrity))
         

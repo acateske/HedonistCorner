@@ -15,7 +15,7 @@ class PointOfSaleTableViewController: UITableViewController {
     
     private var pointOfSale = [PointOfSale]()
     private var ref: DatabaseReference?
-    private var lastCell = PointOfSaleTableViewCell()
+    private var lastCell = PointOfSaleCell()
     private var buttonTag = -1
     
     //MARK: View
@@ -27,6 +27,7 @@ class PointOfSaleTableViewController: UITableViewController {
         tableView.allowsSelection = false
         ref = Database.database().reference()
         readingDataFromFirebase()
+        tableView.register(UINib(nibName: K.TableViewCellNibName.salePoint, bundle: nil), forCellReuseIdentifier: K.CellIdentifier.pointOfSaleCell)
     }
     
     //MARK: TableView
@@ -37,7 +38,7 @@ class PointOfSaleTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = Bundle.main.loadNibNamed(K.CellIdentifier.pointOfSaleCell, owner: self, options: nil)?.first as! PointOfSaleTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.pointOfSaleCell, for: indexPath) as! PointOfSaleCell
         
         cell.storeNameLabel?.text = pointOfSale[indexPath.row].storeName
         cell.storeImage?.sd_setImage(with: URL(string: pointOfSale[indexPath.row].storeImage))
@@ -108,13 +109,13 @@ class PointOfSaleTableViewController: UITableViewController {
         }
         if sender.tag != previousTag {
             buttonTag = sender.tag
-            lastCell = tableView.cellForRow(at: IndexPath(row: buttonTag, section: 0)) as! PointOfSaleTableViewCell
+            lastCell = tableView.cellForRow(at: IndexPath(row: buttonTag, section: 0)) as! PointOfSaleCell
             lastCell.animation(duration: 0.5, c: {
                 self.view.layoutIfNeeded()
             })
         }
         if sender.tag == previousTag {
-            lastCell = PointOfSaleTableViewCell()
+            lastCell = PointOfSaleCell()
             buttonTag = -1
         }
         tableView.endUpdates()

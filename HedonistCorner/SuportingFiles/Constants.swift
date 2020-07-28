@@ -86,6 +86,13 @@ struct K {
     struct PlaceholderNames {
         static let cigarBrend = "Search for Cigar Brand"
         static let searchCigars = "Search for cigar"
+        static let addYourAge = "Add your age!"
+    }
+    
+    struct TableViewCellNibName {
+        static let cigarAndSpirit = "CigarAndSpiritTableViewCell"
+        static let cigarArt = "CigarArtTableViewCell"
+        static let salePoint = "PointOfSaleTableViewCell"
     }
 }
 

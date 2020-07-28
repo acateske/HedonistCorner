@@ -46,7 +46,7 @@ class DetailAccessoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.detailAccessoriesCell, for: indexPath) as! DetailAccessoriesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.detailAccessoriesCell, for: indexPath) as! DetailAccessoriesCell
         cell.nameOfAccessories?.text = accessoriesNames[indexPath.row]
         cell.imageOfAccessories?.sd_setImage(with: URL(string: accessoriesPictures[indexPath.row]))
         

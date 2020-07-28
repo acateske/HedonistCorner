@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailAccessoriesTableViewCell: UITableViewCell {
+class DetailAccessoriesCell: UITableViewCell {
 
     //MARK: Properties
     
