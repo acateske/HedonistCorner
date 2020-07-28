@@ -67,7 +67,7 @@ class PointOfSaleTableViewController: UITableViewController {
         if indexPath.row == buttonTag {
             return 680
         } else {
-            return 390
+            return 440
         }
     }
     

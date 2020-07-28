@@ -206,7 +206,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="fu0-R7-IIw" secondAttribute="trailing" constant="100" id="anL-RC-MPI"/>
                     <constraint firstItem="wOq-Qb-gkL" firstAttribute="top" secondItem="ipc-Br-hpR" secondAttribute="bottom" constant="10" id="rRk-Cm-TfJ"/>
                     <constraint firstItem="JJX-hN-1xq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="36" id="xWD-bG-Un5"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="mb9-du-p7I" secondAttribute="bottom" constant="16" id="xmD-fO-EwG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mb9-du-p7I" secondAttribute="bottom" priority="999" constant="16" id="xmD-fO-EwG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
