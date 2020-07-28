@@ -65,7 +65,7 @@ class CigarArtTableViewController: UITableViewController {
             cell.buttonName.addTarget(self, action: #selector(handleOpenedCell), for: .touchUpInside)
             cell.cigarArtLabel?.text = cigarArts[indexPath.row].cigarArtText
             cell.buttonName.tag = indexPath.row
-            cell.cellExist = true //zato je ovo bitno
+            cell.cellExist = true
         
         UIView.animate(withDuration: 0.5) {
             cell.contentView.layoutIfNeeded()
@@ -90,18 +90,15 @@ class CigarArtTableViewController: UITableViewController {
         let previousTag = buttonTag
         
         if lastCell.cellExist {
-            print("Ovo se desava drugo!!!!") //da zatvorim celiju ako odmah otvaram novu
             lastCell.animation(duration: 0.5, c: {
                 self.view.layoutIfNeeded()
             })
         }
         if sender.tag == buttonTag {
-            print("Ovo se desava trece!!!!")//da zatvorim celiju
             buttonTag = -1
             lastCell = CigarArtCell()
         }
         if sender.tag != previousTag {
-            print("Ovo se desava prvo!!!!")//otvaram celiju
             buttonTag = sender.tag
             lastCell = tableView.cellForRow(at: IndexPath(row: buttonTag, section: 0)) as! CigarArtCell
             lastCell.animation(duration: 0.5, c: {
