@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CelebrityViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-yY-zAP">
-                                <rect key="frame" x="-150" y="56" width="150" height="591"/>
+                                <rect key="frame" x="-150" y="44" width="150" height="623"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cj-Xi-LUf">
                                         <rect key="frame" x="4" y="16" width="142" height="30"/>
@@ -157,7 +157,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8R-93-jp1">
-                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CelebrityCell" rowHeight="319" id="To9-nc-PuS" customClass="CelebrityCell" customModule="HedonistCorner" customModuleProvider="target">
@@ -258,7 +258,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="FSs-Am-Wi3" kind="show" identifier="startSeque" id="voW-Ie-9o8"/>
+                                                    <segue destination="FSs-Am-Wi3" kind="presentation" identifier="startSeque" modalPresentationStyle="fullScreen" id="voW-Ie-9o8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -327,7 +327,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FSs-Am-Wi3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nQX-eV-o3V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -345,7 +345,7 @@
             <objects>
                 <tableViewController id="VkO-gP-xpq" customClass="GuidelinesTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eZA-q2-epI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -380,6 +380,7 @@
                             <outlet property="delegate" destination="VkO-gP-xpq" id="nT7-30-2DE"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="GWR-5l-sx1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsV-Zs-Oqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,7 +391,7 @@
             <objects>
                 <tableViewController id="XRy-0h-yEt" customClass="SelectedCigarBrendTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fg5-jP-GWq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="l2m-5V-D5X">
@@ -525,6 +526,7 @@
                             <outlet property="delegate" destination="XRy-0h-yEt" id="td6-Qh-Vo5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="HOx-vf-nqw"/>
                     <connections>
                         <outlet property="searchBar" destination="l2m-5V-D5X" id="Ftv-Hg-Ljz"/>
                     </connections>
@@ -538,11 +540,11 @@
             <objects>
                 <viewController id="wVs-yd-kZi" customClass="InfoCigarBrendViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="113-1l-UXR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCu-Sh-BQU">
-                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsu-qz-YjU">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
@@ -568,6 +570,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zhh-wR-kul"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Rhh-e2-fba"/>
                     <connections>
                         <outlet property="infoCigarBrandText" destination="gsu-qz-YjU" id="UqH-Hc-NX6"/>
                         <outlet property="scrollView" destination="KCu-Sh-BQU" id="eS2-LG-ljP"/>
@@ -582,7 +585,7 @@
             <objects>
                 <tableViewController id="WUq-sF-cFV" customClass="CigarBrendTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Un9-bO-PRz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="cET-dP-1jH">
@@ -636,6 +639,7 @@
                             <outlet property="delegate" destination="WUq-sF-cFV" id="IfK-aa-cUd"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Hwq-dM-B5a"/>
                     <connections>
                         <outlet property="searchBar" destination="cET-dP-1jH" id="Q3O-3F-KPh"/>
                     </connections>
@@ -649,7 +653,7 @@
             <objects>
                 <tableViewController id="Jg1-dT-dqG" customClass="AccessoriesTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="k0I-x4-YJJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -680,6 +684,7 @@
                             <outlet property="delegate" destination="Jg1-dT-dqG" id="OmP-EF-PGc"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="QbS-PG-j2N"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPh-O5-Ivb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -690,7 +695,7 @@
             <objects>
                 <tableViewController id="iKw-zH-dxi" customClass="CigarAndSpiritTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nrr-h0-7hk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -708,6 +713,7 @@
                             <outlet property="delegate" destination="iKw-zH-dxi" id="h6f-j0-fhs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="QHl-Vj-i2y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRi-38-wsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -718,7 +724,7 @@
             <objects>
                 <tableViewController id="HwW-Ei-jaM" customClass="PointOfSaleTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="acP-9M-Zye">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -736,6 +742,7 @@
                             <outlet property="delegate" destination="HwW-Ei-jaM" id="IaJ-dn-bu3"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="plm-FR-kj1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1US-IA-sbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -746,7 +753,7 @@
             <objects>
                 <tableViewController id="TrV-u4-SfI" customClass="CigarArtTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O4a-zc-il0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -764,6 +771,7 @@
                             <outlet property="delegate" destination="TrV-u4-SfI" id="D7D-eN-y7f"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="KwE-2h-Ajf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wir-Zr-vZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -774,7 +782,7 @@
             <objects>
                 <tableViewController id="ZrH-5D-9CG" customClass="DetailAccessoriesTableViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MkY-SV-ak6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -819,6 +827,7 @@
                             <outlet property="delegate" destination="ZrH-5D-9CG" id="wcj-Ve-6nB"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Zyu-cg-Sdp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTk-Jf-Zkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -829,11 +838,11 @@
             <objects>
                 <viewController id="fPM-8D-F72" customClass="InfoAccessoriesViewController" customModule="HedonistCorner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qqG-fx-keY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAt-UC-KEZ">
-                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3s-z8-DWK">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
@@ -859,6 +868,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7dx-6m-lhp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GyR-DF-lPc"/>
                     <connections>
                         <outlet property="infoTextLabel" destination="c3s-z8-DWK" id="F1L-WX-PHJ"/>
                         <outlet property="scrollView" destination="eAt-UC-KEZ" id="0OR-AM-laH"/>
