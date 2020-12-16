@@ -35,7 +35,7 @@ class CelebrityViewController: UIViewController {
         tableView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSideMenu)))
         tableView.allowsSelection = false
         readingDataFromFirebase()
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
     }
     
 //MARK: Methods

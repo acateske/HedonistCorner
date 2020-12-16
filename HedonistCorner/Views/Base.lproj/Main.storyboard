@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C7J-C4-cRy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C7J-C4-cRy">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-yY-zAP">
                                 <rect key="frame" x="-150" y="44" width="150" height="623"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cj-Xi-LUf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cj-Xi-LUf">
                                         <rect key="frame" x="4" y="16" width="142" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -38,7 +38,7 @@
                                             <segue destination="VkO-gP-xpq" kind="show" identifier="GuideVC" id="nCV-QE-C9R"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ua5-Aa-BV8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ua5-Aa-BV8">
                                         <rect key="frame" x="4" y="62" width="142" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -57,7 +57,7 @@
                                             <segue destination="WUq-sF-cFV" kind="show" identifier="cigarBrends" id="sdr-gk-vyL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8X-Kb-FDj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8X-Kb-FDj">
                                         <rect key="frame" x="4" y="108" width="142" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -76,7 +76,7 @@
                                             <segue destination="Jg1-dT-dqG" kind="show" identifier="AccessoriesVC" id="BAh-ww-kwx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-42-FuO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-42-FuO">
                                         <rect key="frame" x="4" y="154" width="142" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -95,7 +95,7 @@
                                             <segue destination="TrV-u4-SfI" kind="show" identifier="CigarArt" id="kn1-P8-qhm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZw-qR-u1p">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZw-qR-u1p">
                                         <rect key="frame" x="4" y="200" width="142" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -114,7 +114,7 @@
                                             <segue destination="iKw-zH-dxi" kind="show" identifier="CigarAndSpirit" id="ZUI-aH-sCg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoY-7k-GJO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoY-7k-GJO">
                                         <rect key="frame" x="4" y="246" width="142" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -168,13 +168,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6op-KF-86N">
-                                                    <rect key="frame" x="31" y="27" width="313" height="200"/>
+                                                    <rect key="frame" x="32" y="27" width="311" height="200"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="8Tl-2c-igk"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNz-eI-Ifi">
-                                                    <rect key="frame" x="31" y="243" width="313" height="49"/>
+                                                    <rect key="frame" x="32" y="243" width="311" height="49"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -198,6 +198,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m8R-93-jp1" secondAttribute="trailing" id="5mu-Kf-VZw"/>
@@ -208,7 +209,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HPv-yY-zAP" secondAttribute="bottom" id="ddq-VF-ilv"/>
                             <constraint firstItem="m8R-93-jp1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l1z-AU-DLd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="tq4-Ie-LAJ">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="Menu Filled" id="Dvu-cM-GTY">
@@ -247,10 +247,11 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRQ-SB-BK7">
                                                 <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMO-C3-uxB">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMO-C3-uxB">
                                                 <rect key="frame" x="143.5" y="0.0" width="133.5" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
@@ -296,6 +297,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="IvI-Ia-APo"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IvI-Ia-APo" firstAttribute="trailing" secondItem="oAb-Dq-VUA" secondAttribute="trailing" id="70j-tM-psn"/>
@@ -308,7 +310,6 @@
                             <constraint firstItem="oAb-Dq-VUA" firstAttribute="top" secondItem="IvI-Ia-APo" secondAttribute="top" id="x7L-1W-bSG"/>
                             <constraint firstItem="Y40-s6-yi6" firstAttribute="top" secondItem="IvI-Ia-APo" secondAttribute="top" constant="20" id="xCQ-bU-Egy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="IvI-Ia-APo"/>
                     </view>
                     <connections>
                         <outlet property="ageNumberTextField" destination="oRQ-SB-BK7" id="zHf-1v-j92"/>
@@ -562,13 +563,13 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zhh-wR-kul"/>
                         <constraints>
                             <constraint firstItem="KCu-Sh-BQU" firstAttribute="top" secondItem="zhh-wR-kul" secondAttribute="top" id="Kga-RR-Isd"/>
                             <constraint firstItem="zhh-wR-kul" firstAttribute="trailing" secondItem="KCu-Sh-BQU" secondAttribute="trailing" id="gsl-xx-k1G"/>
                             <constraint firstItem="zhh-wR-kul" firstAttribute="bottom" secondItem="KCu-Sh-BQU" secondAttribute="bottom" id="n07-gT-UKi"/>
                             <constraint firstItem="KCu-Sh-BQU" firstAttribute="leading" secondItem="zhh-wR-kul" secondAttribute="leading" id="rbh-2u-dCo"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="zhh-wR-kul"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rhh-e2-fba"/>
                     <connections>
@@ -860,13 +861,13 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7dx-6m-lhp"/>
                         <constraints>
                             <constraint firstItem="eAt-UC-KEZ" firstAttribute="leading" secondItem="7dx-6m-lhp" secondAttribute="leading" id="6tg-X2-4zn"/>
                             <constraint firstItem="eAt-UC-KEZ" firstAttribute="bottom" secondItem="7dx-6m-lhp" secondAttribute="bottom" id="Fwy-Wo-JVP"/>
                             <constraint firstItem="eAt-UC-KEZ" firstAttribute="trailing" secondItem="7dx-6m-lhp" secondAttribute="trailing" id="nLu-RQ-3fG"/>
                             <constraint firstItem="eAt-UC-KEZ" firstAttribute="top" secondItem="7dx-6m-lhp" secondAttribute="top" id="ubp-Vu-e7r"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7dx-6m-lhp"/>
                     </view>
                     <navigationItem key="navigationItem" id="GyR-DF-lPc"/>
                     <connections>
